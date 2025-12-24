@@ -1,0 +1,5120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Resumen del Freakend 2016 - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-post has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+
+        
+
+
+
+
+
+
+
+
+
+<div class="heading">
+  
+
+  
+  <div class="heading-heading">
+    <h1>Resumen del Freakend 2016</h1>
+  </div>
+  
+
+  
+  <div class="heading-description">
+    <p>80 frikis encerrados con comida, alcohol y ordenadores durante 48 horas en un albergue de montaña, atrapados por una tormenta de nieve inesperada. Lo se, suena a argumento de una pelicula de serie B, pero no, resumidamente (mucho) esto fue el Freakend 2016.</p>
+  </div>
+  
+
+  
+  <div class="heading-image">
+    <img  alt="Resumen del Freakend 2016"  src="/assets/images/gen/posts/2016-02-12-freakend-2016/thumbnail.webp" />
+  </div>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        
+
+        <div class="pb-3">
+          <span>Published on 12 February 2016</span>
+        </div>
+
+        
+          
+
+
+<div class="alert alert-default d-flex align-items-center" role="alert">
+    <i class="bi bi-translate me-2"></i>
+    <div>This post is preserved from the old <b>visualstudioex3.com</b> Wordpress site and his content is presented in the original format and unstranslated from spanish.</div>
+</div>
+        
+
+        <div class="content pb-2"><p>De nuevo, un año más, se celebro el Freakend, un evento anual a pequeña escala en una casa rural, que este año ha reunido nada más y nada menos que a 80 personas, casi el doble de la edición anterior, donde nos juntamos profesionales del sector de diversos estudios, trabajando tanto dentro como fuera de nuestras fronteras, para compartir experiencias y conocernos mejor durante estos dos días que dura el evento a base de charlas y mucho networking.</p>
+
+<h1 id="freakend-2016">Freakend 2016</h1>
+
+<p>Dado que este año eramos 80 personas y que la casa del año pasado se quedo pequeña, <strong>Diego Bezares</strong> (<a href="https://twitter.com/Diegobez">@Diegobez</a>), quien organiza el evento por segundo año, encontró esta maravilla de albergue en lo alto de la sierra de Guadarrama, en La Tablada.</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Ya en el <a href="https://twitter.com/hashtag/Freakend2016?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend2016</a>, bienvenidos al Hotel Overlook ;) <a href="https://t.co/Ul4lKmcwtd">pic.twitter.com/Ul4lKmcwtd</a></p>&mdash; José Miguel Sánchez Fernández - EX3 (@ex3_tlsa) <a href="https://twitter.com/ex3_tlsa/status/695658247735353345?ref_src=twsrc%5Etfw">February 5, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>El sitio estuvo genial. Contaba con 4 plantas que tuvimos disponibles para repartirnos sin problema entre todos los asistentes al evento, un gran comedor, con catering contratado para los desayunos, comidas y cenas, y una gran sala para realizar las charlas + otra más pequeña para un track paralelo donde se hicieron algunas charlas a parte. Esta ultima medida se agradece para evitar la saturación de charlas del año pasado :)</p>
+
+<h1 id="pequeños-reencuentros-personales">Pequeños reencuentros personales</h1>
+
+<p>Como en mis resúmenes anteriores, me gusta dedicar un breve espacio personal sobre reencuentros con viejos colegas o conocidos, de este mundillo, gente interesante que creo que merece la pena conocer y seguir en todo lo posible por lo que pueden aportar en base a su experiencia y conocimientos.</p>
+
+<p>Al igual que el año pasado, me he podido reencontrar con viejas amistades del mundillo del videojuego que llevaba muchos años sin ver, bien por que se habían mudado al extranjero o bien por otras circunstancias de la vida. Uno de ellos es <strong>Alejo Civantos</strong> (<a href="https://twitter.com/alejocamaleon">@alejocamaleon</a>), un colega de saraos anteriores y un culo inquieto en todo lo que tiene que ver con diseño de videjuegos y uno de los fundadores de <a href="http://www.thegamekitchen.com/">The Game Kitchen</a>, creadores del popular <a href="http://store.steampowered.com/app/284390">The Last Door</a>.  Por otro lado, después de años compartiendo post y demás por los foros de <strong>Stratos-AD</strong>, como con muchos otros, tuve la ocasión por fin de conocer en persona a <strong>Miguel Santirso</strong> (<a href="https://twitter.com/mstirso">@mstirso</a>), que ha trabajado en juegos como <a href="http://www.tinythief.com/">Tiny Thief</a> y que ahora es diseñador en <a href="http://company.king.com/">King</a>, que entre una cosa u otra, hemos coincidido en varios eventos pero nunca con la suerte de cruzarnos para saludarnos. <strong>David Erosa</strong> (<a href="https://twitter.com/david_erosa">@david_erosa</a>), que le llevaba perdida la pista desde el <strong>Gamelab</strong> de hace un par de años, y otra persona que llevaba tiempo que le tenia perdida también la pista, <strong>Belen Albeza</strong>, quizás más conocida como <strong>Benko</strong> (<a href="https://twitter.com/ladybenko">@ladybenko</a>), vieja conocida de las game jams de <strong>Campus Party</strong> de por entonces asi como de los extintos foros de <strong>DivSite</strong> y el mundillo entorno a <a href="http://www.ionlitio.com/div-games-studio/">Div Game Studio</a>.</p>
+
+<h1 id="charlas">Charlas</h1>
+
+<p>Las charlas, el corazón del Freakend. A diferencia del año pasado, este año no ha sido posible grabar las charlas por problemas de ultima hora con las cámaras, y mucho menos hacer streaming por problemas de cobertura en la zona donde estábamos.</p>
+
+<p>Por comentar alguna de las charlas que más me gustaron, debo mencionar principalmente una que de la que, precisamente, no puedo decir ni autor ni de que trataba exactamente y de la que no saque foto alguna.</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Las mejores charlas del <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> son aquellas q empiezan con: esta charla no se puede grabar, no se pueden hacer fotos y yo no estuve aki</p>&mdash; Jorge J &#39;Jorhell&#39; (@flipper83) <a href="https://twitter.com/flipper83/status/695932333506084865?ref_src=twsrc%5Etfw">February 6, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Sin romper «el secreto de sumario» :P la charla la dio un profesional que trabaja en uno de los grandes estudios del otro lado del charco, con sede en varios países. Su charla fue interesante en el punto de que explicaba muy detalladamente el proceso de producción y desarrollo de una famosa saga de juegos, y que cuesta creer que el tiempo de desarrollo medio de estos juegos no llegue ni al año de media de duración entre otras curiosidades. Estuvo interesante conocer por ejemplo el como se organizan los distintos estudios alrededor del mundo. Otra parte de la propia charla se enfocaba más en la parte técnica de los juegos en si, el como funcionan o gestionan las físicas, el enorme sistema de animaciones que implementan… todo ello daría para otra charla la mar de interesante.</p>
+
+<p>Otras charlas interesantes, de las que si se puede hablar,  fueron por ejemplo la de <strong>Jaime Chapinal</strong> (<a href="https://twitter.com/chapi13">@chapi13</a>) sobre localización en idiomas como el árabe o idiomas asiáticos y como trabajan en EA estos temas. Estuvo explicando los problemas de trasladar textos a idiomas con fuentes complejas y el como lo abordan, consejos y herramientas disponibles para edición de fuentes así como buenas practicas a llevar cabo la tarea de localizar tu juego en otro idioma. Las diapositivas de su charla están disponibles para quien le interese:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Slides de mi charla en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> : i18n - Best practices : <a href="https://t.co/0dqx0wIKWO">https://t.co/0dqx0wIKWO</a></p>&mdash; Chapi (@chapi13) <a href="https://twitter.com/chapi13/status/696795887381704704?ref_src=twsrc%5Etfw">February 8, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p><strong>Benko</strong> nos brindo una charla sobre consejos para participar en una game jam como la <a href="http://ludumdare.com/compo/">Ludum Dare</a> y no morir en el intento. Yo, que llevo ya varios años algo desconectado de las game jams por varios motivos (aunque me he presentado a un par de Global Game Jams, prácticamente desde la ultima Campus Party en 2011 no he vuelto a participar de forma seria en una) y de trastear en casa con proyectos propios como antaño (demasiado tiempo, mucho, y es algo <a href="https://visualstudioex3.com/blog/gamedev/wip/">que llevo tiempo intentando arreglar</a>) la charla de <strong>Benko</strong> me ha motivado en cierta manera, quizás lo suficiente como para que intente participar en la próxima Ludum Dare (quien sabe…). Su charla se centro mucho en como organizarse la agenda durante las 48 horas escasas que dura una game jam, el saber desconectar a ratos para no estresarse demasiado y el como enfocar y pulir la idea del juego que queramos hacer. Tenéis disponibles las diapositivas de su charla:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Las slides de la charla de ayer del <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> &quot;Surviving game jams&quot; <a href="https://t.co/mbYpAredr3">https://t.co/mbYpAredr3</a></p>&mdash; Belén 😱 (@ladybenko) <a href="https://twitter.com/ladybenko/status/696295140885950464?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Un par de charlas más que me gustaron personalmente fueron la de <strong>Kike Alcor</strong> (<a href="https://twitter.com/gamezer0">@gamezer0</a>) sobre como funciona un rasterizador 2D por software (que creo que al final no subió la presentación de su charla):</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">The slides of my software renderer presentation are now online: <a href="https://t.co/mGAuVGn5Oa">https://t.co/mGAuVGn5Oa</a></p>&mdash; Kike Alcor (@SuperKeeks) <a href="https://twitter.com/SuperKeeks/status/700428141119041537?ref_src=twsrc%5Etfw">February 18, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>O la charla de <strong>Javier Canton</strong>, como es habitual en charlas anteriores suyas, enfocada a programación de shaders, en la que recuerdo que nos estuvo enseñando varias demos en tiempo real en la web de <a href="https://www.shadertoy.com/">ShaderToy</a> como esta que nos dejo literalmente flipando en colores:</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/__G43hELHL0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<p>Enlace a la demo: <a href="https://www.shadertoy.com/view/ld3Gz2">https://www.shadertoy.com/view/ld3Gz2</a></p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Demos about <a href="https://twitter.com/hashtag/shadertoy?src=hash&amp;ref_src=twsrc%5Etfw">#shadertoy</a> written during the <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> conference<a href="https://t.co/qeapwW6ZXD">https://t.co/qeapwW6ZXD</a><a href="https://t.co/dpbPIygFMN">https://t.co/dpbPIygFMN</a><a href="https://t.co/CBybIDE4Sv">https://t.co/CBybIDE4Sv</a></p>&mdash; JavierCantonFerrero (@jcant0n) <a href="https://twitter.com/jcant0n/status/696411881033043968?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Y de seguro la charla de <strong>Juan Fernandez</strong> (<a href="https://twitter.com/JuanFernandez">@<strong>JuanFernandez</strong></a>) me habría gustado mucho… si no se me hubiesen pegado las sabanas la mañana del domingo :P</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Impagable charla sobre diseño de combates por <a href="https://twitter.com/JuanFernandez?ref_src=twsrc%5Etfw">@JuanFernandez</a>, de Ninja Theory. LU-JA-ZO. <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/1F4GEPYX6T">pic.twitter.com/1F4GEPYX6T</a></p>&mdash; PlayMedusa (@PlayMedusa) <a href="https://twitter.com/PlayMedusa/status/696288128257155073?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<h1 id="networking-y-demás-frikadas">Networking y demás frikadas</h1>
+
+<p>Si por un lado el Freakend lo definen sus charlas, la otra cara es sin duda el networking. Este evento no se basa solo en venir y sentarte a ver interesantes charlas sobre desarrollo de juegos (o sobre frikadas en si mismas <a href="https://visualstudioex3.com/blog/tag/freakend/">como las de años anteriores</a>) si no de abrirte a conocer gente con quien poner en común conocimientos, inquietudes y sobre todo la pasión por el desarrollo de videojuegos y todo lo que lo rodea.</p>
+
+<p>Es imposible venir al Freakend y volverte sin haber hecho contactos nuevos o afianzar los que ya tienes, echarte unas risas rememorando anécdotas o incluso echarte alguna partidita a juegos de mesa o videojuegos que algún friki se haya traído:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Masacre en el Samurai Gunn <a href="https://twitter.com/david_erosa?ref_src=twsrc%5Etfw">@david_erosa</a> <a href="https://twitter.com/DavidJaumandreu?ref_src=twsrc%5Etfw">@DavidJaumandreu</a> <a href="https://twitter.com/Ludipe?ref_src=twsrc%5Etfw">@Ludipe</a> @vaus_spaceship <a href="https://t.co/wna5J4tP6V">pic.twitter.com/wna5J4tP6V</a></p>&mdash; Maikel Ortega (@MaikelOrtega_) <a href="https://twitter.com/MaikelOrtega_/status/696126723897872384?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Y como no, también es un ambiente idóneo para traerte el juego en que estas trabajando para que otros lo prueben. En mi caso, tuve la ocasion de poder probar <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=587289245">Conga Master</a>, un divertido juego desarrollado por <strong>Miguel Murat</strong> (<a href="https://twitter.com/xanday">@xanday</a>) y <strong>David Jaumandreu</strong> (<a href="https://twitter.com/DavidJaumandreu">@DavidJaumandreu</a>) que consiste en hacer la conga tratando de captar cada vez a más personas del escenario discotequero. Dicho así, un juego de hacer la conga, quizás no anime mucho. Os puedo asegurar que el juego engancha y mucho. Es más, mi partida, con un «mega combo» en camino, se quedo sin terminar por que empezaba una charla xD</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/9IMtTg29Mg8" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<p>Y si este año recuerdo algo friki de verdad, fue sin duda un gadget que se trajo <strong>Diego Bezares</strong>, una pequeña cámara alargada, como un pequeño mando a distancia, con dos objetivos a cada lado, que saca al instante fotos de 360º. ¡Brutisimo! :D La cámara si no me equivoco debe ser esta: <a href="https://theta360.com/en/about/theta/">https://theta360.com/en/about/theta/</a></p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2016-02-12-freakend-2016/freakend_panoramic_by_dbezares_R0010151.jpg" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/freakend_panoramic_by_dbezares_R0010151.jpg" />
+
+  
+
+  <figcaption>
+    
+      <h4>Raw Ricoh Theta 360 capture</h4>
+    
+
+    
+      <p>The original post in Wordpress showed this image as "live 360" using a third-party plugin. The new web site not implements any integration to show this image properly, but I working on try to integrate later a custom viewer based on "Google VRView" or similar available technology.</p>
+    
+  </figcaption>
+</figure>
+
+<p>Otra frikada, aprovechando que vino <strong>Alejo Civantos</strong>, era recuperar una vieja tradición de las kdds strateras y las que se hicieron cuando el ya extinto <a href="https://es.wikipedia.org/wiki/Asociaci%C3%B3n_de_Desarrolladores_de_Ocio_Interactivo_Digital">DOID</a>, El juego de la Servilleta. Esta idea de Alejo consiste en un pequeño juego en el que cada persona ha de escribir dos lineas de texto continuando el texto anterior, del que solo tiene a la vista la segunda de las dos lineas anteriores. La idea inicial de este juego era tratar de sacar adelante «un diseño» de un juego encadenando lo primero que se te venia a la cabeza interpretando libremente el contexto de la linea del anterior autor. Como de friki nos pasamos, y de troles más aun, la mayoría de las servilletas que se hicieron en kdds anteriores se convirtieron en soberbias y surrealistas historias de las que poco diseño final o coherente se podía extraer, pero que al leerlas pasabas un buen rato de risas con el personal. Este año, con 80 participantes, no iba a ser a menos el resultado ;)</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="ca" dir="ltr">La servilleta del <a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a> <a href="https://t.co/HTAbiG6geO">pic.twitter.com/HTAbiG6geO</a></p>&mdash; AlejoLab 🌱🌿 (@alejocamaleon) <a href="https://twitter.com/alejocamaleon/status/696353688592453632?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Como anécdota de este Freakend cabe destacar la tormenta de nieve que cayo durante la madrugada del sábado, al final de una de las charlas, lo que nos produjo algún que otro breve corte eléctrico sin ocasionar problemas serios:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Feliz navidad desde el <a href="https://twitter.com/hashtag/Freakend2016?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend2016</a> (<a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a>). Nevando en lo alto de la sierra como si no hubiera mañana :P <a href="https://t.co/AdTSfKNOyP">pic.twitter.com/AdTSfKNOyP</a></p>&mdash; José Miguel Sánchez Fernández - EX3 (@ex3_tlsa) <a href="https://twitter.com/ex3_tlsa/status/696123228796907521?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Como de videojuegos no vive solo el friki, algunos asistentes del evento venían equipados con cámaras de fotos, lo cual aprovecharon para sacarla a pasear durante la nevada nocturna así como por la mañana:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">De vuelta del <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> el año que viene repetimos <a href="https://twitter.com/Diegobez?ref_src=twsrc%5Etfw">@Diegobez</a> gracias por organizarlo y por invitarnos <a href="https://t.co/3TwbM6ElvM">pic.twitter.com/3TwbM6ElvM</a></p>&mdash; Raiz - Immersive artworks - Photogrammetry /LiDAR (@RaizNewMedia) <a href="https://twitter.com/RaizNewMedia/status/696395269991219200?ref_src=twsrc%5Etfw">February 7, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>No recuerdo el nombre del compañero que estuvo sacando fotos de larga exposición durante la nevada junto con su compañero (eran los de <strong>Raiz New Media</strong> si no me equivoco). Si me leéis, mi galería de Flickr la tenéis enlazada arriba del todo, ahí podéis ver el álbum de fotos donde subo las que saco con el Nokia Lumia 1020 de las que os hable ;)</p>
+
+<p>También se trajeron unas <strong>HTC Vive</strong>, las gafas de realidad virtual de HTC, y también me quede con las ganas de probarlas:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Vamos a probar las <a href="https://twitter.com/hashtag/HTCvive?src=hash&amp;ref_src=twsrc%5Etfw">#HTCvive</a> en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> :) <a href="https://t.co/bU67USfNMr">pic.twitter.com/bU67USfNMr</a></p>&mdash; Jorge Cantón Ferrero (@jorge_magic) <a href="https://twitter.com/jorge_magic/status/695988129141022722?ref_src=twsrc%5Etfw">February 6, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<h1 id="cerrando-el-resumen">Cerrando el resumen</h1>
+
+<p>Aunque se ha echado un poco de menos la casa de las ediciones anteriores, con su mesa de billar, futbolin, mini bar y la barbacoa, debo reconocer que este año el sitio ha estado genial y bien habilitado para toda la tropa que eramos, tanto los espacios para las charlas así como el comedor. Con la suma de las charlas y la estupenda gente que ha asistido este año, debo decir que el Freakend, una vez más, se ha superado. A mi al menos, me ha dejado muy buen recuerdo la experiencia, y como siempre, me deja con ganas del próximo Freakend. Ha sido un placer compartir la experiencia con todos vosotros, un gustazo las charlas que habéis dado y dar las gracias a <strong>Diego Bezares</strong> por currarselo tanto de nuevo.</p>
+
+<p>Y cerrando este resumen del Freakend, como guinda del pastel, quiero aprovechar para compartir el estupendo vídeo resumen que grabo <strong>Samuel Molina</strong>, más conocido como <strong>FuKuy</strong> (<a href="https://twitter.com/FuKuy">@FuKuy</a>):</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/l2VWGglwRkc" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<p>Como de costumbre, dejo una galería con todas las fotos que he sacado durante el evento.</p>
+</div>
+
+        
+        <div class="pt-5">
+          <div class="row">
+    <div class="page-image">
+        <div class="gallery gallery-masonry">
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_57_06_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_57_06_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_57_06_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_59_37_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_59_37_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_59_37_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_59_46_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_59_46_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_17_59_46_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_00_59_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_00_59_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_00_59_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_05_29_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_05_29_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_05_29_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_21_26_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_21_26_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_21_26_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_30_05_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_30_05_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_30_05_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_30_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_30_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_30_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_37_14_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_37_14_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_18_37_14_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_02_37_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_02_37_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_02_37_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_26_09_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_26_09_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_26_09_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_53_42_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_53_42_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_53_42_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_54_00_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_54_00_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_20_54_00_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_21_05_15_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_21_05_15_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_21_05_15_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_22_19_22_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_22_19_22_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_22_19_22_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_00_57_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_00_57_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_00_57_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_06_03_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_06_03_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_06_03_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_15_20_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_15_20_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_15_20_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_18_38_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_18_38_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160205_23_18_38_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_02_31_23_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_02_31_23_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_02_31_23_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_29_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_29_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_29_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_34_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_34_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_34_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_42_22_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_42_22_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_11_42_22_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_05_51_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_05_51_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_05_51_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_08_35_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_08_35_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_08_35_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_16_03_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_16_03_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_12_16_03_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_13_58_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_13_58_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_13_58_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_21_58_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_21_58_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_21_58_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_28_19_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_28_19_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_28_19_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_33_14_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_33_14_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_33_14_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_49_10_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_49_10_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_49_10_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_52_14_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_52_14_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_16_52_14_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_17_10_04_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_17_10_04_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_17_10_04_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_06_25_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_06_25_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_06_25_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_07_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_07_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_07_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_09_47_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_09_47_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_09_47_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_11_49_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_11_49_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_11_49_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_12_51_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_12_51_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_12_51_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_15_14_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_15_14_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_15_14_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_17_59_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_17_59_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_17_59_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_26_46_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_26_46_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_26_46_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_27_58_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_27_58_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_27_58_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_28_25_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_28_25_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_28_25_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_31_58_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_31_58_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_31_58_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_33_41_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_33_41_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_33_41_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_51_36_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_51_36_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_51_36_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_56_19_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_56_19_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_56_19_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_59_14_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_59_14_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_18_59_14_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_02_30_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_02_30_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_02_30_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_14_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_14_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_14_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_25_28_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_25_28_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_25_28_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_27_20_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_27_20_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_27_20_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_31_30_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_31_30_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_31_30_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_33_15_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_33_15_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_33_15_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_40_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_40_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_40_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_52_23_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_52_23_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_52_23_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_59_44_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_59_44_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_19_59_44_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_12_13_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_12_13_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_12_13_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_40_18_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_40_18_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_40_18_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_38_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_38_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_38_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_46_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_46_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_46_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_56_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_56_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_20_41_56_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_13_05_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_13_05_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_13_05_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_14_10_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_14_10_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_14_10_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_19_27_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_19_27_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_19_27_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_20_43_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_20_43_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_20_43_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_28_26_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_28_26_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_28_26_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_31_26_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_31_26_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_31_26_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_38_53_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_38_53_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_38_53_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_53_46_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_53_46_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_22_53_46_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_15_29_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_15_29_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_15_29_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_16_03_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_16_03_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_16_03_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_18_52_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_18_52_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_18_52_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_22_18_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_22_18_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160206_23_22_18_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_01_03_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_01_03_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_01_03_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_07_54_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_07_54_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_07_54_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_11_29_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_11_29_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_11_29_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_44_57_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_44_57_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_44_57_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_07_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_07_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_07_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_15_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_15_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_15_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_27_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_27_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_27_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_39_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_39_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_39_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_49_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_49_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_00_45_49_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_22_46_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_22_46_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_22_46_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_23_08_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_23_08_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_23_08_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_23_29_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_23_29_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_01_23_29_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_03_14_38_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_03_14_38_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_03_14_38_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_03_15_02_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_03_15_02_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_03_15_02_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_20_40_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_20_40_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_20_40_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_33_03_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_33_03_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_33_03_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_36_45_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_36_45_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_36_45_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_49_55_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_49_55_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_11_49_55_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_12_53_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_12_53_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_12_53_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_14_41_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_14_41_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_14_41_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_17_50_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_17_50_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_17_50_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_18_08_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_18_08_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_18_08_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_24_38_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_24_38_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_24_38_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_25_44_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_25_44_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_25_44_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_28_28_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_28_28_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_28_28_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_30_25_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_30_25_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_30_25_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_32_00_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_32_00_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_32_00_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_38_08_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_38_08_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_38_08_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_38_58_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_38_58_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_38_58_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_46_24_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_46_24_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_46_24_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_47_18_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_47_18_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_47_18_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_49_02_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_49_02_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_49_02_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_52_33_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_52_33_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_52_33_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_54_57_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_54_57_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_54_57_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_56_12_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_56_12_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_56_12_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_57_50_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_57_50_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_12_57_50_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_02_41_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_02_41_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_02_41_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_10_05_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_10_05_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_10_05_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_11_43_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_11_43_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_11_43_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_19_40_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_19_40_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_19_40_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_20_08_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_20_08_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_20_08_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_41_47_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_41_47_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_41_47_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_43_24_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_43_24_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_43_24_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_46_39_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_46_39_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_46_39_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_57_54_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_57_54_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_13_57_54_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_31_06_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_31_06_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_31_06_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_06_57_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_06_57_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_06_57_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_12_38_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_12_38_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_12_38_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_33_59_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_33_59_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_33_59_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_34_15_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_34_15_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_34_15_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_20_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_20_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_20_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_31_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_31_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_31_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_37_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_37_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_37_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_46_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_46_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_35_46_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_37_02_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_37_02_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_37_02_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_38_08_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_38_08_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_38_08_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_38_18_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_38_18_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_14_38_18_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_16_55_40_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_16_55_40_Raw.webp" alt="/assets/images/gen/posts/2016-02-12-freakend-2016/WP_20160207_16_55_40_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    var grid = document.querySelector('.gallery');
+    var msnry;
+
+    imagesLoaded(grid, function () {
+        msnry = new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            percentPosition: true,
+            horizontalOrder: true
+        });
+    });
+</script>
+        </div>
+        
+
+        <div class="pt-5">
+          
+          <span>Categories</span>
+          <div class="categories">
+            <div class="d-flex flex-wrap">
+              
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/events">
+    Events
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/freakend">
+    Freakend
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/archive">
+    Archive
+  </a>
+  
+</div>
+
+
+            </div>
+          </div>
+          
+
+          
+          
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/blog/freakend-2016';
+    this.page.identifier = 'http://localhost:4000/blog/freakend-2016';
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

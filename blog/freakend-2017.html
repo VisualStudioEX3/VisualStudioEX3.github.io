@@ -1,0 +1,3188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Resumen del Freakend 2017 - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-post has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+
+        
+
+
+
+
+
+
+
+
+
+<div class="heading">
+  
+
+  
+  <div class="heading-heading">
+    <h1>Resumen del Freakend 2017</h1>
+  </div>
+  
+
+  
+
+  
+  <div class="heading-image">
+    <img  alt="Resumen del Freakend 2017"  src="/assets/images/gen/posts/2017-02-20-freakend-2017/thumbnail.webp" />
+  </div>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        
+
+        <div class="pb-3">
+          <span>Published on 20 February 2017</span>
+        </div>
+
+        
+          
+
+
+<div class="alert alert-default d-flex align-items-center" role="alert">
+    <i class="bi bi-translate me-2"></i>
+    <div>This post is preserved from the old <b>visualstudioex3.com</b> Wordpress site and his content is presented in the original format and unstranslated from spanish.</div>
+</div>
+        
+
+        <div class="content pb-2"><p>Mientras termino de escribir este resumen, estará seguramente terminando las ultimas charlas del <a href="https://twitter.com/hashtag/FreakendMobile?src=hash">Freakend Mobile</a>, que se celebraba este finde (bueno, más bien cuando leas esto serian las 2:50 de la madrugada del lunes para mi xD). Entre las practicas del master (que en breve tendré lista <a href="https://twitter.com/ex3_tlsa/status/831805175761354752">la practica que os enseñe el otro día</a> para descarga en el portfolio) y otras ocupaciones, no he tenido tiempo en estas dos semanas ni si quiera de seleccionar las fotos para este post, pero lo prometido es deuda, y como cada año os traigo mi resumen del Freakend de videojuegos.</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_16_06_54_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_16_06_54_Raw.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Asistentes del Freakend esperando dos semanas a que se publicara este resumen…</p>
+    
+  </figcaption>
+</figure>
+
+<p>Un año más se celebra el Freakend, un evento de fin de semana que se celebra (o celebraba mejor dicho) en una casa rural en torno a más de 50 personas, entre charlas variadas, desde charlas técnicas hasta autenticas frikadas relacionadas con el desarrollo de juegos o cualquier cosa relacionada con ello. Para mi, como años anteriores, y al igual que a otros eventos que suelo asistir, es la ocasión perfecta para reencontrarme con gente que bien por la distancias o las circunstancias, apenas coincidimos durante todo el año y aprovechar para ponerte al día o disfrutar simplemente de una buena charla hablando algo que a muchos nos une, el desarrollo de videojuegos.</p>
+
+<h1 id="el-lugar">El lugar</h1>
+
+<p>Como decía antes, este evento <a href="https://visualstudioex3.com/blog/gamedev/eventos/resumen-del-freakend-2015/">se celebraba en una casa rural</a>, pero estos dos últimos años, dado al éxito del evento y al boca a boca entre los asistentes, el numero de asistentes aumento (diría que se ha duplicado desde mi primer <a href="https://visualstudioex3.com/blog/gamedev/eventos/resumen-del-freakend-2014/">freakend en 2014</a>), esta se nos quedo pequeña. Tras disfrutar <a href="https://visualstudioex3.com/blog/gamedev/eventos/resumen-del-freakend-2016/">del acogedor albergue de montaña del año pasado</a>, nevada incluida (aunque no todo el mundo le gusto, a mi me pareció acogedor y con cierto encanto el lugar del año pasado :P) este año <strong>Jorge Barroso</strong> (<a href="https://twitter.com/flipper83">@flipper83</a>), el organizador junto a <strong>Diego Bezares</strong> (<a href="https://twitter.com/Diegobez">@Diegobez</a>), ha subido el listón a un punto que lo pone difícil de superar en los próximos freakends. Este año el evento se ha organizado en un hotel de la sierra madrileña, en Becerril de la Sierra, <a href="http://hotel-lasgacelas.com">Hotel Las Gacelas</a>.</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2017-02-20-freakend-2017/hotel/WP_20170205_11_13_58_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/hotel/WP_20170205_11_13_58_Raw.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<p>El hotel estuvo genial, muy buenas y confortables habitaciones, enorme sala para las charlas donde cabíamos todos de sobra, un menú de comidas y cenas variado y con el que no pasas hambre (casi comí mejor que en las Navidades xD), cafetería/bar, aunque no se echaba en falta gracias al continuo surtido de refrescos, cerveza y café que teníamos en la antesala del salón de las charlas. Este año  el Freakend, por el lugar sobre todo, me ha recordado mucho a los viejos eventos que montaba Microsoft años atrás, las Code Camps, y eso es señal de la calidad que va ganando año tras año este evento :)</p>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="951657800" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 951657800-slides" style="display: block;">
+                        <div class="numbertext">1 / 3</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_09_47_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_09_47_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 951657800-slides" style="display: none;">
+                        <div class="numbertext">2 / 3</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_09_58_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_09_58_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 951657800-slides" style="display: none;">
+                        <div class="numbertext">3 / 3</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_10_10_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_10_10_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 951657800)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 951657800)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="951657800-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 951657800-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_09_47_Raw.webp" alt="" onclick="currentSlide(1, 951657800)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 951657800-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_09_58_Raw.webp" alt="" onclick="currentSlide(2, 951657800)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 951657800-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_10_10_Raw.webp" alt="" onclick="currentSlide(3, 951657800)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>Como se puede observar, las vistas desde las habitaciones e incluso desde el comedor hacia la sierra eran preciosas.</p>
+
+<h1 id="invasión-de-vr-">Invasión de VR :)</h1>
+
+<p>Este año hemos tenido un amplio grupo de gente dedicada a la realidad virtual, encabezados por <strong>Diego Bezares</strong>, que dio una charla con mesa redonda hasta bien entrada la madrugada del sábado:</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2017-02-20-freakend-2017/vr/WP_20170204_01_21_10_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/vr/WP_20170204_01_21_10_Raw.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<p>Gente con la que he compartido agradables charlas hasta las tantas de la madrugada y en el caso de uno de ellos, tuve la posibilidad probar su juego, un simulador de tanques con estética a lo <strong>Tron Legacy</strong>, y con un control muy bueno (¡y tan bueno, me estuve como una hora jugandolo!). <del>Soy pésimo para los nombres y para desgracia de mi memoria, la única referencia que tengo de ellos es que por lo que me estuvieron contando presentaron en Fitur una simulación de Don Quijote de La Mancha (y que por falta de tiempo me quede sin poder probarla en el Freakend). Si me leéis decirme quienes erais para seguiros por twitter al menos :)</del> Ya os encontré: <strong>Estudio Future</strong> (<a href="https://twitter.com/estudiofutureVR">@estudiofutureVR</a>), su juego <strong>Fusion Wars</strong> (<a href="https://twitter.com/fusionwars">@fusionwars</a>) y si no me equivoco <strong>Gonzalo Ruiperez</strong> (<a href="https://twitter.com/g0nch0">@g0nch0</a>) es con quien estuve hasta las tantas de la mañana de tertulia la noche del sábado al domingo :)</p>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="952606600" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 952606600-slides" style="display: block;">
+                        <div class="numbertext">1 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_12_28_30_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_12_28_30_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 952606600-slides" style="display: none;">
+                        <div class="numbertext">2 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_00_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_00_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 952606600-slides" style="display: none;">
+                        <div class="numbertext">3 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_45_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_45_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 952606600-slides" style="display: none;">
+                        <div class="numbertext">4 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_55_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_55_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 952606600)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 952606600)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="952606600-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 952606600-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_12_28_30_Raw.webp" alt="" onclick="currentSlide(1, 952606600)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 952606600-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_00_Raw.webp" alt="" onclick="currentSlide(2, 952606600)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 952606600-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_45_Raw.webp" alt="" onclick="currentSlide(3, 952606600)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 952606600-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//vr/WP_20170205_13_11_55_Raw.webp" alt="" onclick="currentSlide(4, 952606600)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<h1 id="charlas">Charlas</h1>
+
+<p>Este año la agenda de charlas ha estado mejor ajustada para no saturar como en los dos últimos años, dejando espacio para poder hacer networking o pasar tiempo probando demos en la sala de VR. Aun arrastrando sueño de 3 días (tenia que dejar lista para entregar la practica del master justo para ese fin de semana) intente asistir a todas las charlas, si no recuerdo mal creo que hubo solo un par a las que no asistí o llegue casi al final de las mismas, una de las que me perdí, la de <strong>Beatriz Alonso</strong> (<a href="https://twitter.com/beaconpancakes">@beaconpancakes</a>) y su charla sobre gráficos vectoriales para móviles:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Y ahora graficos vectoriales para moviles con @beaconpancakes <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/8ACWrCeetm">pic.twitter.com/8ACWrCeetm</a></p>&mdash; Jose Raluy (@Jose_Raluy) <a href="https://twitter.com/Jose_Raluy/status/828198405117710336?ref_src=twsrc%5Etfw">February 5, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Remarcando varias de las que más me gustaron, una fue la de <strong>Carlos Hernández Gómez</strong> (<a href="https://twitter.com/k4rliky">@<strong>k4rliky</strong></a>) y su charla sobre ingeniería inversa en videojuegos, hablando sobre hackear juegos como Guild Wars2 y similares para poder explorar zonas externas a las áreas de juego de los mapas teletransportando al personaje o alterando el comportamiento de la cámara para poder navegar en modo «espectador» por donde queramos.  Aunque su charla no esta subida, podéis encontrar material en su canal de Youtube (<a href="https://www.youtube.com/user/k4rliky">https://www.youtube.com/user/k4rliky</a>):</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Muchas gracias a todos los asistentes a mi charla de ingeniería inversa en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> y gracias a <a href="https://twitter.com/ladyCircus?ref_src=twsrc%5Etfw">@ladyCircus</a> por ayudarme con todo esto 😊 <a href="https://t.co/kK4aB084Qr">pic.twitter.com/kK4aB084Qr</a></p>&mdash; Imagineer de andar por casa (@k4rliky) <a href="https://twitter.com/k4rliky/status/827863776158416896?ref_src=twsrc%5Etfw">February 4, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="953964400" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: block;">
+                        <div class="numbertext">1 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_07_21_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_07_21_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">2 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_12_06_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_12_06_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">3 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_15_35_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_15_35_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">4 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_21_03_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_21_03_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">5 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_31_10_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_31_10_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">6 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_31_48_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_31_48_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">7 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_34_00_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_34_00_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">8 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_38_19_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_38_19_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">9 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_38_58_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_38_58_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">10 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_39_50_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_39_50_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">11 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_43_14_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_43_14_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">12 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_47_42_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_47_42_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">13 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_51_18_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_51_18_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 953964400-slides" style="display: none;">
+                        <div class="numbertext">14 / 14</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_53_56_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_53_56_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 953964400)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 953964400)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="953964400-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_07_21_Raw.webp" alt="" onclick="currentSlide(1, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_12_06_Raw.webp" alt="" onclick="currentSlide(2, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_15_35_Raw.webp" alt="" onclick="currentSlide(3, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_21_03_Raw.webp" alt="" onclick="currentSlide(4, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_31_10_Raw.webp" alt="" onclick="currentSlide(5, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_31_48_Raw.webp" alt="" onclick="currentSlide(6, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_34_00_Raw.webp" alt="" onclick="currentSlide(7, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_38_19_Raw.webp" alt="" onclick="currentSlide(8, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_38_58_Raw.webp" alt="" onclick="currentSlide(9, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_39_50_Raw.webp" alt="" onclick="currentSlide(10, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_43_14_Raw.webp" alt="" onclick="currentSlide(11, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_47_42_Raw.webp" alt="" onclick="currentSlide(12, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_51_18_Raw.webp" alt="" onclick="currentSlide(13, 953964400)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 953964400-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//reverse-engineering/WP_20170204_12_53_56_Raw.webp" alt="" onclick="currentSlide(14, 953964400)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>La charla de <strong>Juan Fernandez</strong> (<a href="https://twitter.com/JuanFernandez">@JuanFernandez</a>), que trabaja en <a href="http://www.ninjatheory.com">Ninja Theory</a>, y que nos hablo en profundidad sobre narrativa en videojuegos, sus múltiples vertientes, sus pros y sus contras según casos, y todo ilustrado con varios ejemplos de juegos conocidos. Una charla muy interesante y con grandes consejos a tener en cuenta si vas a desarrollar un juego que necesite de narrativa (no se si se han publicado las diapositivas o si se llego a grabar la charla, pero si es así si alguien sabe donde encontrarlas que comente por aquí o en twiiter, plz):</p>
+
+<div class="jekyll-twitter-plugin"><p>There was a 'Not Found' error fetching URL: 'https://twitter.com/beaconpancakes/status/827870049490915328?ref_src=twsrc%5Etfw'</p></div>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="955899000" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: block;">
+                        <div class="numbertext">1 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_15_58_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_15_58_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">2 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_20_38_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_20_38_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">3 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_21_58_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_21_58_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">4 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_23_21_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_23_21_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">5 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_24_06_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_24_06_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">6 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_25_55_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_25_55_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">7 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_27_46_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_27_46_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">8 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_27_59_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_27_59_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">9 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_30_06_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_30_06_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">10 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_30_53_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_30_53_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">11 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_34_27_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_34_27_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">12 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_37_03_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_37_03_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">13 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_37_26_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_37_26_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">14 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_39_41_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_39_41_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">15 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_40_07_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_40_07_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">16 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_43_42_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_43_42_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">17 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_47_02_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_47_02_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">18 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_48_06_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_48_06_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">19 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_49_05_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_49_05_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">20 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_50_08_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_50_08_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">21 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_51_19_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_51_19_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">22 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_51_24_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_51_24_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 955899000-slides" style="display: none;">
+                        <div class="numbertext">23 / 23</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_54_19_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_54_19_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 955899000)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 955899000)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="955899000-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_15_58_Raw.webp" alt="" onclick="currentSlide(1, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_20_38_Raw.webp" alt="" onclick="currentSlide(2, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_21_58_Raw.webp" alt="" onclick="currentSlide(3, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_23_21_Raw.webp" alt="" onclick="currentSlide(4, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_24_06_Raw.webp" alt="" onclick="currentSlide(5, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_25_55_Raw.webp" alt="" onclick="currentSlide(6, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_27_46_Raw.webp" alt="" onclick="currentSlide(7, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_27_59_Raw.webp" alt="" onclick="currentSlide(8, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_30_06_Raw.webp" alt="" onclick="currentSlide(9, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_30_53_Raw.webp" alt="" onclick="currentSlide(10, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_34_27_Raw.webp" alt="" onclick="currentSlide(11, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_37_03_Raw.webp" alt="" onclick="currentSlide(12, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_37_26_Raw.webp" alt="" onclick="currentSlide(13, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_39_41_Raw.webp" alt="" onclick="currentSlide(14, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_40_07_Raw.webp" alt="" onclick="currentSlide(15, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_43_42_Raw.webp" alt="" onclick="currentSlide(16, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_47_02_Raw.webp" alt="" onclick="currentSlide(17, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_48_06_Raw.webp" alt="" onclick="currentSlide(18, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_49_05_Raw.webp" alt="" onclick="currentSlide(19, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_50_08_Raw.webp" alt="" onclick="currentSlide(20, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_51_19_Raw.webp" alt="" onclick="currentSlide(21, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_51_24_Raw.webp" alt="" onclick="currentSlide(22, 955899000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 955899000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//videogame-narrative/WP_20170204_13_54_19_Raw.webp" alt="" onclick="currentSlide(23, 955899000)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>La charla de <strong>Gema Parreño</strong> (<a href="https://twitter.com/SoyGema">@SoyGema</a>) contando su experiencia de <a href="https://www.youtube.com/user/loscubicus">Cubicus</a>, una de esas charlas que gustan por tocar temas que no siempre se cuentan respecto de montar tu propio estudio de videojuegos, hablando de lo bueno y también lo malo, aciertos y errores. Como le decía a Gema durante las comidas, se echan de menos más charlas de este tipo, que no todo han de ser charlas técnicas en el Freakend ;)</p>
+
+<div class="jekyll-twitter-plugin"><p>There was a 'Not Found' error fetching URL: 'https://twitter.com/beaconpancakes/status/827919296437313536?ref_src=twsrc%5Etfw'</p></div>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="958893100" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 958893100-slides" style="display: block;">
+                        <div class="numbertext">1 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_07_07_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_07_07_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 958893100-slides" style="display: none;">
+                        <div class="numbertext">2 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_34_10_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_34_10_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 958893100-slides" style="display: none;">
+                        <div class="numbertext">3 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_35_33_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_35_33_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 958893100-slides" style="display: none;">
+                        <div class="numbertext">4 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_36_53_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_36_53_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 958893100)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 958893100)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="958893100-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 958893100-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_07_07_Raw.webp" alt="" onclick="currentSlide(1, 958893100)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 958893100-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_34_10_Raw.webp" alt="" onclick="currentSlide(2, 958893100)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 958893100-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_35_33_Raw.webp" alt="" onclick="currentSlide(3, 958893100)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 958893100-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//cubicus/WP_20170204_16_36_53_Raw.webp" alt="" onclick="currentSlide(4, 958893100)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>La charla de <strong>Salva</strong> (<a href="https://twitter.com/salvadelapuente">@salvadelapuente</a>) y su Div Game Studio versión javascript, donde nos estuvo hablando de su transcompilador, de como funcionaban las tripas de esta obra maestra de la programación de juegos con la que muchos nos iniciamos en su día, una de las charlas más técnicas pero que muchos disfrutamos como niños:</p>
+
+<div class="jekyll-twitter-plugin"><p>There was a 'Not Found' error fetching URL: 'https://twitter.com/salvadelapuente/status/827945988132315137'</p></div>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="960739000" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: block;">
+                        <div class="numbertext">1 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_17_48_45_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_17_48_45_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">2 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_17_55_03_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_17_55_03_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">3 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_00_29_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_00_29_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">4 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_00_43_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_00_43_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">5 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_01_56_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_01_56_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">6 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_05_41_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_05_41_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">7 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_45_15_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_45_15_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 960739000-slides" style="display: none;">
+                        <div class="numbertext">8 / 8</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_58_25_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_58_25_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 960739000)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 960739000)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="960739000-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_17_48_45_Raw.webp" alt="" onclick="currentSlide(1, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_17_55_03_Raw.webp" alt="" onclick="currentSlide(2, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_00_29_Raw.webp" alt="" onclick="currentSlide(3, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_00_43_Raw.webp" alt="" onclick="currentSlide(4, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_01_56_Raw.webp" alt="" onclick="currentSlide(5, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_05_41_Raw.webp" alt="" onclick="currentSlide(6, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_45_15_Raw.webp" alt="" onclick="currentSlide(7, 960739000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 960739000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//div2js/WP_20170204_18_58_25_Raw.webp" alt="" onclick="currentSlide(8, 960739000)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>La charla de <strong>Aitor Tejedor</strong> (<a href="https://twitter.com/tejedoraitor">@tejedoraitor</a>),  de <a href="https://twitter.com/kaia_studios">Kaia Studios</a><strong>,</strong> sobre el sistema de multiplayer que están implementando en su juego <a href="http://store.steampowered.com/app/493180">Dynasty Feud</a>, donde nos explicaban como habían solucionado a su manera el problema de la sincronización entre jugadores. Una charla técnica y muy ingeniosa que merecía la pena atender:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/tejedoraitor?ref_src=twsrc%5Etfw">@tejedoraitor</a> nos hablara de multijugador en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://twitter.com/flipper83?ref_src=twsrc%5Etfw">@flipper83</a> <a href="https://twitter.com/Diegobez?ref_src=twsrc%5Etfw">@Diegobez</a> <a href="https://twitter.com/jotamaza?ref_src=twsrc%5Etfw">@jotamaza</a> <a href="https://twitter.com/Robertogeek?ref_src=twsrc%5Etfw">@Robertogeek</a> <a href="https://t.co/2LdHZqVp2V">pic.twitter.com/2LdHZqVp2V</a></p>&mdash; Proyecto Vera Grande (@VeraGrandecc) <a href="https://twitter.com/VeraGrandecc/status/827948217652375552?ref_src=twsrc%5Etfw">February 4, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="962108000" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 962108000-slides" style="display: block;">
+                        <div class="numbertext">1 / 3</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_19_35_38_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_19_35_38_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 962108000-slides" style="display: none;">
+                        <div class="numbertext">2 / 3</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_19_49_06_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_19_49_06_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 962108000-slides" style="display: none;">
+                        <div class="numbertext">3 / 3</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_20_10_05_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_20_10_05_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 962108000)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 962108000)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="962108000-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 962108000-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_19_35_38_Raw.webp" alt="" onclick="currentSlide(1, 962108000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 962108000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_19_49_06_Raw.webp" alt="" onclick="currentSlide(2, 962108000)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 962108000-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//multiplayer/WP_20170204_20_10_05_Raw.webp" alt="" onclick="currentSlide(3, 962108000)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>El gran <strong>Unai Landa</strong> (<a href="https://twitter.com/unai_landa">@unai_landa</a>) hablando sobre el motor <strong>Karisma</strong> y los 10 años que lleva este motor funcionando y evolucionando en <a href="http://www.digital-legends.com/">Digital Legends</a>. La charla hizo un recorrido desde los inicios del motor, los problemas que se fueron encontrando, el como fueron adaptándose a las nuevas tecnologías (como cuando hicieron <a href="http://www.digital-legends.com/game_kroll.html">aquel juego para el primer iPhone y que se anuncio durante la keynote</a>) y muchos temas técnicos alrededor de dicho motor y la forma de trabajar con el:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">El puto amo!! <a href="https://twitter.com/unai_landa?ref_src=twsrc%5Etfw">@unai_landa</a> 10 años en digital Legends! 30 años haciendo videojuegos! <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/lhLmjswvmA">pic.twitter.com/lhLmjswvmA</a></p>&mdash; Jorge J &#39;Jorhell&#39; (@flipper83) <a href="https://twitter.com/flipper83/status/828010059632406528?ref_src=twsrc%5Etfw">February 4, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="963192900" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 963192900-slides" style="display: block;">
+                        <div class="numbertext">1 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_46_36_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_46_36_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 963192900-slides" style="display: none;">
+                        <div class="numbertext">2 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_48_08_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_48_08_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 963192900-slides" style="display: none;">
+                        <div class="numbertext">3 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_52_14_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_52_14_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 963192900-slides" style="display: none;">
+                        <div class="numbertext">4 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170205_00_09_18_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170205_00_09_18_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 963192900)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 963192900)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="963192900-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 963192900-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_46_36_Raw.webp" alt="" onclick="currentSlide(1, 963192900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 963192900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_48_08_Raw.webp" alt="" onclick="currentSlide(2, 963192900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 963192900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170204_23_52_14_Raw.webp" alt="" onclick="currentSlide(3, 963192900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 963192900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//digital-legends-karisma-engine/WP_20170205_00_09_18_Raw.webp" alt="" onclick="currentSlide(4, 963192900)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>Pero si hay una charla que de verdad me gusto con diferencia fue la de <strong>Zalo</strong> (<a href="https://twitter.com/Zal0">@Zal0</a>) y es que un Freakend sin hablar de programación para Game Boy, no es un Freakend xD</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://t.co/p6fXQM7ZQJ">https://t.co/p6fXQM7ZQJ</a> Slides + demo de la charla sobre cómo crear juegos para <a href="https://twitter.com/hashtag/GameBoy?src=hash&amp;ref_src=twsrc%5Etfw">#GameBoy</a> ayer en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/XKdEi08sYc">pic.twitter.com/XKdEi08sYc</a></p>&mdash; Zalo (@Zal0) <a href="https://twitter.com/Zal0/status/828668081031503874?ref_src=twsrc%5Etfw">February 6, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Si ya en su día, durante mi primer RetroMadrid me impresiono la importante comunidad de desarrolladores activa que existe detrás de viejas joyas como el Spectrum o el MSX, la que hay tras la GameBoy no se queda lejos. Ya en el Freakend de hace un par de años tuvimos dos charlas épicas sobre desarrollo de juegos para la GameBoy clásica de toda la vida, una fue íntegramente sobre desarrollo en ensamblador (ni diapositivas, la presentación fue hecha directamente sobre una ROM corriendo en el emulador!) o la del compilador de C# a GameBoy. Este año Zalo nos presentaba su motor de juegos en C para Game Boy, <strong>ZGB</strong> (<a href="https://github.com/Zal0/ZGB">Github</a>), basado sobre GBDK, que facilitaba la programación de juegos para esta legendaria consola casi a un nivel como podría lograr hoy día quizás motores actuales como Unity3D.</p>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="964002900" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: block;">
+                        <div class="numbertext">1 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_19_12_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_19_12_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">2 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_20_12_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_20_12_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">3 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_22_52_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_22_52_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">4 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_23_17_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_23_17_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">5 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_24_42_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_24_42_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">6 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_25_44_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_25_44_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">7 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_27_37_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_27_37_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">8 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_31_02_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_31_02_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">9 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_34_16_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_34_16_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">10 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_37_10_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_37_10_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">11 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_44_16_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_44_16_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">12 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_57_21_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_57_21_Raw.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 964002900-slides" style="display: none;">
+                        <div class="numbertext">13 / 13</div>
+                        
+                        <img src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_14_09_48_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_14_09_48_Raw.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 964002900)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 964002900)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="964002900-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo active" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_19_12_Raw.webp" alt="" onclick="currentSlide(1, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_20_12_Raw.webp" alt="" onclick="currentSlide(2, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_22_52_Raw.webp" alt="" onclick="currentSlide(3, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_23_17_Raw.webp" alt="" onclick="currentSlide(4, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_24_42_Raw.webp" alt="" onclick="currentSlide(5, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_25_44_Raw.webp" alt="" onclick="currentSlide(6, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_27_37_Raw.webp" alt="" onclick="currentSlide(7, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_31_02_Raw.webp" alt="" onclick="currentSlide(8, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_34_16_Raw.webp" alt="" onclick="currentSlide(9, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_37_10_Raw.webp" alt="" onclick="currentSlide(10, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_44_16_Raw.webp" alt="" onclick="currentSlide(11, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_13_57_21_Raw.webp" alt="" onclick="currentSlide(12, 964002900)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 964002900-demo" src="/assets/images/gen/posts/2017-02-20-freakend-2017//zgb/WP_20170205_14_09_48_Raw.webp" alt="" onclick="currentSlide(13, 964002900)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>Nos hizo una demostración en vivo y en directo de como armar una sencilla escena, con sus colisiones, scroll y todo, y como crear los sprites de un personaje sencillo y como hacerlo funcionar en el emulador. Sinceramente, un trabajo para quitarse el sombrero :)</p>
+
+<h1 id="el-mitico-juego-de-la-servilleta-de-alejo-civantos">El mitico juego de la servilleta de Alejo Civantos</h1>
+
+<p>Este año repitió con nosotros un gran amigo, <strong>Alejo Civantos</strong> (<a href="https://twitter.com/alejocamaleon"><strong>@alejocamaleon</strong></a>) y como es costumbre desde 2006 en cada KDD donde ha asistido, se hizo el juego de la servilleta. El juego consiste en ir rellenando un papel (en sus inicios era una servilleta, de ahí el nombre :P) escribiendo dos lineas, que serán continuación de la ultima que haya escrito otra persona, con lo primero que se te pase por la cabeza, lo que sea, siguiendo o tratando de seguir el contexto de la ultima frase. Como os podéis imaginar, salen cosas muy loquisimas :D</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+    <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_31_43_Raw.webp" target="_blank">
+  
+
+  <img src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_31_43_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_31_43_Raw.webp" />
+
+  
+    </a>
+  
+
+  <figcaption>
+    
+
+    
+      <p>Pulsa en la imagen para verla a tamaño completo (y no, no le busques sentido a lo que leas en ella xD)</p>
+    
+  </figcaption>
+</figure>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/alejocamaleon?ref_src=twsrc%5Etfw">@alejocamaleon</a> y la cadena en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/umYfg6G8NS">pic.twitter.com/umYfg6G8NS</a></p>&mdash; David Ávila (@davilovick) <a href="https://twitter.com/davilovick/status/828216831362138112?ref_src=twsrc%5Etfw">February 5, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<h1 id="y-no-todo-son-charlas-en-el-freakend">Y no todo son charlas en el Freakend</h1>
+
+<p>Aunque el grueso de un evento como este son las charlas, otro punto que aporta valor es el networking que se hace entre charla y charla, durante las comidas o ya bien entrada la noche, acompañandolo de cerveza o unos buenos cubatas. Algo que se hace todos los años es traerse juegos de mesa y videojuegos con multiplayer local con los que poder echarse unas buenas risas:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Playing &quot;Unfair Jousting Fair&quot; (by <a href="https://twitter.com/Rodaja_es?ref_src=twsrc%5Etfw">@Rodaja_es</a>) at <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/KfAh5mdwnK">pic.twitter.com/KfAh5mdwnK</a></p>&mdash; Ludipe (@Ludipe) <a href="https://twitter.com/Ludipe/status/828040639443005440?ref_src=twsrc%5Etfw">February 5, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>E incluso hay un hueco para volver al pasado y revivir experiencias retro como Tron manda, si no que se lo digan a <strong>Carlos Milán</strong> (<a href="https://twitter.com/cmilanf">@cmilanf</a>) y su Commodore Amiga tuneado, con el que nos estuvo enseñando una extensa colección de obras de arte videojueguil de la época (aunque no tenias el Another World, eso jamas te lo perdonare! :P)</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_03_26_21_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_03_26_21_Raw.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Aquí, Carlos demostrándonos sus dotes profesionales a los mandos del Commodore Amiga, jugando al Pinball Fantasy</p>
+    
+  </figcaption>
+</figure>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="ca" dir="ltr">Taller de hardware Commodore Amiga y 68080 (sí) en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/4lj0clEhT5">pic.twitter.com/4lj0clEhT5</a></p>&mdash; Carlos Milán Figueredo (@cmilanf) <a href="https://twitter.com/cmilanf/status/827925828000415744?ref_src=twsrc%5Etfw">February 4, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Recuerdo también haber visto por allí gente trasteando con <a href="http://www.lexaloffle.com/pico-8.php">Pico8</a> pero sin llegar a saber si estaban preparando algún taller o que, y a <strong>Sergio De Prado, aka Sergeo</strong> (@vaus_spaceship <a href="https://twitter.com/sergiodeprado">@sergiodeprado</a>), intentando, si mal no recuerdo, compilar unas demos musicales para la NES (¡este hombre hace música para la GameBoy!). Todo esto sin olvidar los distintos proyectos de VR que la gente había traído:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">.<a href="https://twitter.com/alejocamaleon?ref_src=twsrc%5Etfw">@alejocamaleon</a> disfrutando de las delicias de la VR <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/UR0mVmDaZn">pic.twitter.com/UR0mVmDaZn</a></p>&mdash; Robbie The Geek ᯅ (@Robertogeek) <a href="https://twitter.com/Robertogeek/status/827973476153561088?ref_src=twsrc%5Etfw">February 4, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">.<a href="https://twitter.com/Ludipe?ref_src=twsrc%5Etfw">@Ludipe</a> avid player of the tennis of the future. He is virtually good <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/VUjF7bNOkG">pic.twitter.com/VUjF7bNOkG</a></p>&mdash; AlejoLab 🌱🌿 (@alejocamaleon) <a href="https://twitter.com/alejocamaleon/status/827931852837093377?ref_src=twsrc%5Etfw">February 4, 2017</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<h1 id="conclusión">Conclusión</h1>
+
+<p>Cada año que pasa me convezco más de que venir a este evento merece y mucho la pena, por la experiencia y por la oportunidad mantener el contacto con auténticos cracks de la industria del videojuego y por lo que puedes aprender de ellos. No llegara a ser la misma experiencia que las Campus Party que se celebraban hasta 2011 en Valencia pero cumple un mismo cometido y es de juntar bajo un mismo techo, y de forma personal y muy cercana, a un buen puñado de gente que comparte la misma pasión y disfrute por el desarrollo de juegos en cualquiera de sus variantes, un lugar perfecto donde darte a conocer y dar a conocer tu trabajo y sobre todo hacer contactos, pero sobre todo amigos. Espero que se siga celebrando este evento durante muchos años, y que mientras me lo pueda permitir, pueda seguir asistiendo a ellos (más descansado que esta vez, eso si :P)</p>
+
+<p>En fin, con ganas de que llegue el próximo Freakend. Os dejo la galería con el resto de las fotos que saque durante el fin de semana :)</p>
+</div>
+
+        
+        <div class="pt-5">
+          <div class="row">
+    <div class="page-image">
+        <div class="gallery gallery-masonry">
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170203_22_48_58_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170203_22_48_58_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170203_22_48_58_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170203_23_34_51_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170203_23_34_51_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170203_23_34_51_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_01_27_10_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_01_27_10_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_01_27_10_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_01_27_35_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_01_27_35_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_01_27_35_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_04_35_35_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_04_35_35_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_04_35_35_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_04_35_56_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_04_35_56_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_04_35_56_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_14_24_48_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_14_24_48_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_14_24_48_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_42_44_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_42_44_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_42_44_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_43_40_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_43_40_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_43_40_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_44_30_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_44_30_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_44_30_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_51_35_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_51_35_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_22_51_35_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_02_38_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_02_38_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_02_38_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_06_28_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_06_28_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_06_28_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_11_53_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_11_53_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_11_53_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_20_12_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_20_12_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170204_23_20_12_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_01_59_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_01_59_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_01_59_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_02_47_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_02_47_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_02_47_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_21_34_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_21_34_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_12_21_34_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_13_14_01_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_13_14_01_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_13_14_01_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_06_43_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_06_43_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_06_43_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_06_55_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_06_55_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017/WP_20170205_15_06_55_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_15_00_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_15_00_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_11_15_00_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_13_06_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_13_06_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_13_06_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_13_26_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_13_26_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_13_26_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_14_02_Raw.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_14_02_Raw.webp" alt="/assets/images/gen/posts/2017-02-20-freakend-2017//hotel/WP_20170205_12_14_02_Raw.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    var grid = document.querySelector('.gallery');
+    var msnry;
+
+    imagesLoaded(grid, function () {
+        msnry = new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            percentPosition: true,
+            horizontalOrder: true
+        });
+    });
+</script>
+        </div>
+        
+
+        <div class="pt-5">
+          
+          <span>Categories</span>
+          <div class="categories">
+            <div class="d-flex flex-wrap">
+              
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/events">
+    Events
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/freakend">
+    Freakend
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/archive">
+    Archive
+  </a>
+  
+</div>
+
+
+            </div>
+          </div>
+          
+
+          
+          
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/blog/freakend-2017';
+    this.page.identifier = 'http://localhost:4000/blog/freakend-2017';
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Argos: CICE MPV Project (Unity3D Master degree final project) - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-project has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-md-6">
+
+        
+        <div class="project-heading">
+          <h1>Argos: CICE MPV Project (Unity3D Master degree final project)</h1>
+        </div>
+        
+
+        
+        <div class="project-description">
+          <h3>A 2.5D cinematic platform and a multiplatform game framework for Unity as master degree final project.</h3>
+        </div>
+        <br />
+        
+
+        
+        <div class="project-categories">
+          
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/development">
+    Development
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/net">
+    .NET
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/unity">
+    Unity
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/professional-training">
+    Professional Training
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/games">
+    Games
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/custom-tools">
+    Custom Tools
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/tooling">
+    Tooling
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/pc">
+    PC
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/windows">
+    Windows
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/linux">
+    Linux
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/mac-os">
+    Mac OS
+  </a>
+  
+</div>
+
+
+        </div>
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="project-stats">
+  
+  <div class="project-date">
+    <strong>Date </strong><span>26 October 2017</span>
+  </div>
+  
+
+  
+
+  
+  <div class="project-role">
+    <strong>Role </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Game Programmer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tool Programmer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Game Designer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Level Designer
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-technologies">
+    <strong>Technologies </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unity, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.NET Framework, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C#, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LINQ, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Argos.Framework
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-platforms">
+    <strong>Platforms </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Windows, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Linux, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mac OS X (Intel)
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-genre">
+    <strong>Genre </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.5D, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Platformer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cinematic, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Action, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Game Framework
+
+</span>
+  </div>
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+        <div class="content"><p>My final project for my <strong>Unity3D</strong> game development master degree coursed in CICE on 2017. A 2.5D cinematic action-platformer developed over a custom multiplatform framework (the true core of the project).</p>
+
+<p>This project was developed while I was working on the porting to <strong>Nintendo Switch</strong> of <a href="/projects/ginger-beyond-the-crystal-switch">Ginger: Beyond the Crystal</a> in <a href="https://www.drakharstudio.com/ginger">Drakhar Studio</a>. During this period (3 months) I was working in the idea of creating a framework that ease the common tasks in a multiplatform development with <strong>Unity3D</strong>, like manage the input setup or the file system over the different operating systems or consoles.</p>
+
+<p>After finish my contract with <strong>Drakhar Studio</strong>, I spent an entire month working on the required-playable part of the final project, the 2.5D platformer game, and how integrating the framework in his development.</p>
+
+<p>The framework, at the state of the presented project, cover the following areas:</p>
+
+<ul>
+  <li>
+    <p><strong>Input System:</strong>
+A single player oriented input system, based on <strong>Input Map</strong> assets witch defines actions and axes definitions for use in separate areas of the game like UI or player actions.<br /><br />
+This system is based on <strong>Virtual Axes</strong> that bring the possibility to define input based on keyboard, mouse and/or gamepad axes (sticks, DPads), and <strong>Input Actions</strong> to define actions like jump or shoot, using input from keyboard, mouse and/or gamepad buttons, DPad and triggers. <strong>Input Actions</strong> can managed from events, and both <strong>Input Actions</strong> and <strong>Virtual Axes</strong> can allow input rebind in runtime.<br /><br />
+This system nativelly support the popular game controllers like <strong>XBox 360</strong>, <strong>XBox One</strong>, <strong>PS4</strong> and <strong>Nintendo Switch Pro Controller</strong> (on supported systems). The input system manages automatically a common map between different controllers, in a way to only uses a unique button list to setup the actions and axes. The system also allow the use of generic gamepads and uses a generic input map asset to setup the input map, also allow this setup in runtime.<br /><br />
+This system implements a custom <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-StandaloneInputModule.html">Standalone Input Module</a> and some custom components to bring full support on Unity UI components for UI navigation.</p>
+  </li>
+  <li>
+    <p><strong>Multiplaftform File System:</strong>
+A file system layer to safe manage the basic file operations between <strong>Windows</strong>, <strong>Linux</strong> and <strong>Mac</strong> systems. The system manage a predefined paths to manage savegames, settings, screenshots and custom data folders on user document folder, and avoid errors on path formatting or creation/check the current folders.</p>
+  </li>
+  <li>
+    <p><strong>Localization System:</strong>
+A simple localization system that allow to localize UI text elements with rich text formatting support. The system implements a simple component that manage the UI Text component content in realtime. For the project, this system was designed for only support English and Spanish languages.</p>
+  </li>
+  <li>
+    <p><strong>UI Components:</strong>
+A serie of UI components to bring some functionalities like doble click events, customizable text message events and UI input icon system to show text messages with keyboard, mouse or gamepad button or axis icon based on the common input map system implemented on the first point of this list.</p>
+  </li>
+  <li>
+    <p><strong>Misc additions:</strong>
+Multipurporsal scripts and components with various ideas learned and implemented during this master degree on each practical excercise.</p>
+  </li>
+</ul>
+
+<h2 id="argosframework-development-2017-2019">Argos.Framework, development 2017-2019</h2>
+
+<p>After deliver the project, I’ve started to work on this framework to pulished some parts and improved ones (<strong>Input System</strong> code and his editor inspectors) and rewriting others from scratch (file system, localization system and some UI components), and implementing new additions like <strong>XInput gamepad vibration support</strong> (with visual pattern vibration assets, to allow to design vibration patterns similar to the classic <strong>DirectInput Force Feedback</strong> patterns), <strong>GameJolt API integration</strong> (user session, trophies, leader boards and cloud storage) and more.</p>
+
+<p>Other additions that I’m working is the <strong>XBox One</strong> support, via <strong>Universal Windows Platform</strong>, with <strong>XBox Live</strong> basic services (user session, user stats, leader boards and file storage). The goal of this is trying to unify this services with other like the <strong>GameJolt</strong> or <strong>Steam</strong> services (even consoles services like <strong>PS4</strong>, <strong>XBox One</strong> (not UWP) or <strong>Nintendo Switch</strong>) under an unique layer to simplify the development between platforms, the main goal of this framework.</p>
+
+<h2 id="argosframework-present-day-2025">Argos.Framework, present day (2025)</h2>
+
+<p>During these years I can put in practice some ideas of the framework in some Unity projects where I worked, proved on them the useful applications on some common problems on multiplatform development with <strong>Unity</strong> or the speed up on tooling development with focus on good UI/UX practices using my custom editor controls library.</p>
+
+<p>The last features I worked on the framework was:</p>
+
+<ul>
+  <li>
+    <p>A full, but unfinished, reimplementation of the <strong>Input System</strong> based on <strong>SDL2</strong> library, instead of the <strong>Unity Legacy Input Manager</strong>, to bring full support for gamepads on PC with an universal button layout based on the <strong>XBox Game Controller</strong> and full <strong>Force Feedback/Haptic</strong> feature for any supported gamepad or joystick without required the specific driver (or a custom layer on third-party APIs like the current implemented with <strong>XInput</strong> and <a href="https://github.com/sharpdx/SharpDX">SharpDX</a> to use <strong>DirectInput</strong> API). In fact, is the same support bring by <strong>Valve Steam</strong> platform and most of the base code used by Unity’s most popular asset/plugin for game input, <a href="https://guavaman.com/projects/rewired/">Rewired</a>.</p>
+  </li>
+  <li>
+    <p>An integrated designer for the <strong>Force Feedback/Haptic</strong> feature based on scriptable object as <strong>Vibration Asset</strong> where you can setup, from his inspector, the vibration pattern based on constant values or curves in one or both vibration engines, with the possibility to test the effect in your gamepad without require to run the game.</p>
+  </li>
+  <li>
+    <p>Improved editor controls, including better controls with preview for some contents like images, or an advanced controls like reorderable lists with full event customization and visuals (including implementations like reorderable dictionaries), native modals, or a full serializable and customizable native <strong>Data Grid</strong>.</p>
+  </li>
+  <li>
+    <p>Improved file system abstraction based on file slot concept, represented by scriptable objects, where you can define the data structures like basic key-par-value lists (a dictionary) or complex serializable data structures, the serialization mode (binary, JSON, XML or YAML), and setup encription options.</p>
+  </li>
+</ul>
+
+<p>The last image in the gallery shows a some components and scriptable objects from the <strong>Input Manager</strong> system implemented in <strong>Argos.Framework</strong> and a some of the custom editor controls in the inspector.</p>
+
+<p>The project is in standby since late 2019, and I’m don’t have plans to continue with it, because a lots of problem maintaining some features though a long range of versions of Unity from <strong>Unity 2017.1</strong> to current <strong>Unity 6</strong>, broken compatibility and partial-deprecating APIs without warning from version to version. Adding the total desinterest about this project and his features from most of the professional indie developers colleagues that I meet in these years (mostly because they don’t value to develop his own tools, don’t value some key-features like the complex input haptics, or don’t had to facing the painful issues related with the console port of his games) I don’t see working in this project worth my time and energies anymore.</p>
+</div>
+
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="project-image">
+          <div class="gallery gallery-single-column">
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/jMXht3yfk48" allow="autoplay; encrypted-media"
+    allowfullscreen></iframe>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/00.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/00.webp" alt="/assets/images/gen/projects/argos-cice-mpv/00.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/01.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/01.webp" alt="/assets/images/gen/projects/argos-cice-mpv/01.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/02.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/02.webp" alt="/assets/images/gen/projects/argos-cice-mpv/02.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/03.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/03.webp" alt="/assets/images/gen/projects/argos-cice-mpv/03.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/04.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/04.webp" alt="/assets/images/gen/projects/argos-cice-mpv/04.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/05.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/05.webp" alt="/assets/images/gen/projects/argos-cice-mpv/05.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/06.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/06.webp" alt="/assets/images/gen/projects/argos-cice-mpv/06.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/07.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/07.webp" alt="/assets/images/gen/projects/argos-cice-mpv/07.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/08.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/08.webp" alt="/assets/images/gen/projects/argos-cice-mpv/08.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/09.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/09.webp" alt="/assets/images/gen/projects/argos-cice-mpv/09.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/10.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/10.webp" alt="/assets/images/gen/projects/argos-cice-mpv/10.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/11.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/11.webp" alt="/assets/images/gen/projects/argos-cice-mpv/11.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/12.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/12.webp" alt="/assets/images/gen/projects/argos-cice-mpv/12.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/13.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/13.webp" alt="/assets/images/gen/projects/argos-cice-mpv/13.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/14.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/14.webp" alt="/assets/images/gen/projects/argos-cice-mpv/14.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/15.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/15.webp" alt="/assets/images/gen/projects/argos-cice-mpv/15.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/16.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/16.webp" alt="/assets/images/gen/projects/argos-cice-mpv/16.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/17.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/17.webp" alt="/assets/images/gen/projects/argos-cice-mpv/17.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/18.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/18.webp" alt="/assets/images/gen/projects/argos-cice-mpv/18.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/19.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/19.webp" alt="/assets/images/gen/projects/argos-cice-mpv/19.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/20.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/20.webp" alt="/assets/images/gen/projects/argos-cice-mpv/20.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/21.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/21.webp" alt="/assets/images/gen/projects/argos-cice-mpv/21.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/22.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/22.webp" alt="/assets/images/gen/projects/argos-cice-mpv/22.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>A test level where used to test new features and behavior from the player.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/23.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/23.webp" alt="/assets/images/gen/projects/argos-cice-mpv/23.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>Some work on the settings menu screens with a custom UI components.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/argos-cice-mpv/24.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/argos-cice-mpv/24.webp" alt="/assets/images/gen/projects/argos-cice-mpv/24.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>2019: A capture of some of the tools from Argos.Framework related with the Input Manager. In the image on the left are displayed 2 Scriptable Objects to setup a vibration effect for gamepads, on the right 2 input map Scriptable Objects, in the center a view of the Input Manager component. Other of the features I worked deeply was the creation of a custom editor controls library to ease compose complex editors in inspector view using attributes, like most of popular Unity inspector controls.</span>
+  </div>
+</div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

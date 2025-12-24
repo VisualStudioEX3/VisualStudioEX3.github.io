@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>MEGA Sport Training - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-project has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-md-6">
+
+        
+        <div class="project-heading">
+          <h1>MEGA Sport Training</h1>
+        </div>
+        
+
+        
+        <div class="project-description">
+          <h3>Interactive game developed with Unity and Kinect v2 for the MEGA: Mundo Estrella Galicia beer musseum.</h3>
+        </div>
+        <br />
+        
+
+        
+        <div class="project-categories">
+          
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/development">
+    Development
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/games">
+    Games
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/professional">
+    Professional
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/tooling">
+    Tooling
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/indie-games">
+    Indie Games
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/net">
+    .NET
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/unity">
+    Unity
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/pc">
+    PC
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/windows">
+    Windows
+  </a>
+  
+</div>
+
+
+        </div>
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="project-stats">
+  
+  <div class="project-date">
+    <strong>Date </strong><span>19 June 2019</span>
+  </div>
+  
+
+  
+  <div class="project-studio">
+    <strong>Studio </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="studio-link" href="https://flyingbeastlabs.com" target="_blank">Flying Beast Labs</a>
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-role">
+    <strong>Role </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lead Programmer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Engine Programmer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tool Programmer, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Techincal Artist, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QA Tester
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-technologies">
+    <strong>Technologies </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unity, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.NET Framework, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C#, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kinect 2, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Argos.Framework
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-platforms">
+    <strong>Platforms </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Windows
+
+</span>
+  </div>
+  
+
+  
+  <div class="project-genre">
+    <strong>Genre </strong><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3D, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sports, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Casual, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Advergaming
+
+</span>
+  </div>
+  
+
+  
+
+  
+
+  
+  <div class="project-links">
+    
+
+    
+    <strong>Links </strong>
+    <ul>
+      
+      <li>
+
+
+<a href="https://mundoestrellagalicia.es/" target="_blank">
+  MEGA: Mundo Estrella Galicia
+</a></li>
+      
+      <li>
+
+
+<a href="https://flyingbeastlabs.com/proyectos/mega-sport-training/" target="_blank">
+  Flying Beast Labs project page
+</a></li>
+      
+      <li>
+
+
+<a href="https://flyingbeastlabs.com/3d-wire/" target="_blank">
+  Flying Beast Labs 3D Wire project edition
+</a></li>
+      
+    </ul>
+    
+  </div>
+  
+
+</div>
+
+
+        <div class="content"><p><strong>Lead Programmer</strong> and <strong>Tool Programmer</strong> for the development of <strong>MEGA Sport Training</strong>, an interactive experience for <strong>MEGA: Mundo Estrella Galicia</strong> museum, in A Coruña (Galicia, Spain).</p>
+
+<p>My main task in this project was develop the entire game architecture, focused on modularize all critical parts of the project for ease maintenance, upgrade or deep-changes quickly, the creation of requested tools during the development, and supervising the work of a junior programmer, the person that was develop the 4 mini-games that compose the game (basket, football, hockey and rugby) and help me to integrate the <strong>Kinect v2 SDK</strong> in <strong>Unity</strong> and study how implement features like the advanced gesture recognition.</p>
+
+<p>Other tasks that I colaborate was supporting the 2D and 3D artists as <strong>Technical Artist</strong>, optimizing all 3D assets and materials in-game (combining meshes, fixing materials setup in Unity, and advise the 3D artist, a junior profile, in some tasks involved with optimizing modeling and asset exporting), setup the lighting in all scenes and setup all post-processing effects to fit the limited requeriments of the target machine (an Intel NUC, a barebone/mini PC, without dedicated GPU) to achieve a good performance without lost quality visual look &amp; feel.</p>
+
+<h1 id="3d-wire-2019">3D Wire 2019</h1>
+
+<p>This same year, we make a variation for the <strong>3D Wire</strong> (https://3dwire.es/), an important spanish annual event of animation, games and new media that is celebrating in Segovia (Castile and Leon, Spain). <strong>Weird Games: Food Training</strong> is the new name of the game and have a little visual changes as replacing all sport things like the basket ball by a toaster or the hockey disks by spanish omelets, most of the work as rebranding and applied some gamification rewards for the event games.</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">.<a href="https://twitter.com/FlyingBeastLabs?ref_src=twsrc%5Etfw">@FlyingBeastLabs</a> estarán en el <a href="https://twitter.com/hashtag/showroom?src=hash&amp;ref_src=twsrc%5Etfw">#showroom</a> de <a href="https://twitter.com/hashtag/3DWIRE2019?src=hash&amp;ref_src=twsrc%5Etfw">#3DWIRE2019</a> con su juego Weird Games: Food Training. ¡Pásate por su stand y disfruta de la versión digital de nuestros <a href="https://twitter.com/hashtag/WeirdGames?src=hash&amp;ref_src=twsrc%5Etfw">#WeirdGames</a>! <a href="https://t.co/jb08rc9hHB">https://t.co/jb08rc9hHB</a> <a href="https://t.co/cGfQubV705">pic.twitter.com/cGfQubV705</a></p>&mdash; WEIRD (@WeirdMarket) <a href="https://twitter.com/WeirdMarket/status/1179055914751578112?ref_src=twsrc%5Etfw">October 1, 2019</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<h1 id="the-true-challenge-kinect-20-windows-10-and-beyond">The true challenge: Kinect 2.0, Windows 10 and beyond</h1>
+
+<p>Also of the difficulties recording custom gestures using the official Kinect SDK tools, implmenting a custom gesture system to avoid some issues with some gesture recognitions, and the many other related and technical issues, the true challenge to develop and maintain this project are the <strong>Kinect 2.0 + Windows 10 combo</strong>:</p>
+
+<ul>
+  <li><strong>Kinect 2.0 has been discontinued by Microsoft in fall 2017 and removed support on Windows</strong> (drivers, tools, etc…) a few months after publising the tools for Kinect 2 for Windows (supported Windows 8.1 as last official version).</li>
+  <li><strong>Never existed an official SDK for Unity</strong>, only a few outdated particular user implementations on the web for <strong>Unity 5.6</strong> (we developed the game with <strong>Unity 2018.3.5</strong>). We using the only full implementation solution available and well documented by examples, that can be found in the <a href="https://assetstore.unity.com/packages/tools/integration/kinect-v2-examples-with-ms-sdk-18708#reviews">Asset Store</a>.</li>
+  <li><strong>No all PC configurations supports Kinect 2 hardware</strong>. During the pre-production, we found that only 2 PCs in our studio are capable to run <strong>Kinect 2</strong> without problems. Other PCs directly can’t work, can’t recognized the Kinect hardware. Seems the <strong>USB 3.0</strong> in most of them has issues related with power supply or the drivers (in some cases, Kinect burned the AC Power unit on a couple of our PCs).</li>
+  <li><strong>Kinect 2 hardware can’t works on current versions of Windows 10</strong>. The last supported version is the build 1803 (April 2018 Update). The <strong>USB 3.0</strong> drivers has many known issues and one of them affect to <strong>Kinect 2 USB</strong> connector. The solution initially seems very simple: using the build 1803, but…</li>
+  <li><strong>In Windows 10 you can’t full disable Windows Update services</strong>. And, later or soon, your <strong>Windows 10</strong> will be forced to upgrade to latest version. In our case, disconnect the PC from the net is not a solution. The PC can not we unpluged from the net because need access to internet to send mails and send and read signals from an UDP server. Basically, the solution passed to reroute the all Windows Update known server address to localhost in the Windows hosts file, setup all Windows Update related services to manual and disabled it, and blocking the internal Windows folders related with Windows Update downloads and deployments.</li>
+  <li><strong>The official Kinect 2 AC Power Unit not works on current PC configurations</strong>. One of the Kinects, supplied by the museum, worked with the <strong>Surface 3 AC Power Unit</strong> instead of the Kinect official unit. For any reason the <strong>Kinect 2 Official AC Power Unit</strong> not works properly on current PCs.</li>
+</ul>
+
+<h1 id="and-the-final-boss">And the final boss…</h1>
+
+<p>But the true challenge was the final issue of the <strong>Kinect 2 + Windows 10</strong> combo. At the final stages of the development and testing, we found <strong>the game sometimes was freeze without any reason!</strong> (very inappropiate for a museum experience).</p>
+
+<p>After 2 weeks of deep debugging and testings in the source code of the <strong>Unity</strong> implementation of the <strong>Kinect SDK</strong>, I found that the reason of the game was freezing was the avatar recognition event in a driver level. It’s seems that the outdated driver in <strong>Windows 10</strong> has any internal memory leak or something related bug.</p>
+
+<p>Because I’m not was capable to fix this, because is an internal driver bug and not a source code issue, I designed a little “trick” to able the game to catch the freeze state and reset himself. I developed a little program that works as a monitor instance of the game. A simple terminal program that run in fist place and launch a new instance of the game as child process. Basically the game instances comunicate with the monitor to tell that it’s alive. When the game stop to send signals to the monitor, the monitor understand that the game is freezed, kill the freezed process and launch a new one.</p>
+
+<p>For prevent the user noticed the game reseting process, as idea of the game designer, we empty the entire Windows desktop of icons and hide the task bar, and using the same game splash screen background as desktop background. With this, the user not see any stranger thing except that the game has return to the main menu screen.</p>
+
+<p>P.D.: In a way to avoid several freezes and their resepective resets, I needed to reimplemented all avatar recognition logic system in the game to avoid conitnuous calls to native Kinect avatar recognition functions.</p>
+</div>
+
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="project-image">
+          <div class="gallery gallery-single-column">
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/uFWzycbEUjc" allow="autoplay; encrypted-media"
+    allowfullscreen></iframe>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span><b>Disclaimer:</b> This is a video preview of the published game. This video not shown the final state art.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/00.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/00.webp" alt="/assets/images/gen/projects/mega-sport-training/00.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/01.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/01.webp" alt="/assets/images/gen/projects/mega-sport-training/01.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/02.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/02.webp" alt="/assets/images/gen/projects/mega-sport-training/02.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/03.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/03.webp" alt="/assets/images/gen/projects/mega-sport-training/03.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/04.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/04.webp" alt="/assets/images/gen/projects/mega-sport-training/04.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/05.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/05.webp" alt="/assets/images/gen/projects/mega-sport-training/05.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/06.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/06.webp" alt="/assets/images/gen/projects/mega-sport-training/06.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/07.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/07.webp" alt="/assets/images/gen/projects/mega-sport-training/07.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/08.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/08.webp" alt="/assets/images/gen/projects/mega-sport-training/08.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/09.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/09.webp" alt="/assets/images/gen/projects/mega-sport-training/09.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/10.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/10.webp" alt="/assets/images/gen/projects/mega-sport-training/10.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/11.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/11.webp" alt="/assets/images/gen/projects/mega-sport-training/11.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/12.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/12.webp" alt="/assets/images/gen/projects/mega-sport-training/12.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/13.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/13.webp" alt="/assets/images/gen/projects/mega-sport-training/13.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/14.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/14.webp" alt="/assets/images/gen/projects/mega-sport-training/14.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/15.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/15.webp" alt="/assets/images/gen/projects/mega-sport-training/15.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/16.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/16.webp" alt="/assets/images/gen/projects/mega-sport-training/16.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/17.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/17.webp" alt="/assets/images/gen/projects/mega-sport-training/17.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/18.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/18.webp" alt="/assets/images/gen/projects/mega-sport-training/18.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/19.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/19.webp" alt="/assets/images/gen/projects/mega-sport-training/19.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/20.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/20.webp" alt="/assets/images/gen/projects/mega-sport-training/20.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/21.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/21.webp" alt="/assets/images/gen/projects/mega-sport-training/21.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/22.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/22.webp" alt="/assets/images/gen/projects/mega-sport-training/22.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/23.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/23.webp" alt="/assets/images/gen/projects/mega-sport-training/23.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>A feature implemented in the game is the creation of a game card with a photo of the player with his scores in each game, the team flag selected, an the date of the game, that can be sended to his email if has previously provided.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/24.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/24.webp" alt="/assets/images/gen/projects/mega-sport-training/24.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>The final result of the game card, showed animated in the screen.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/25.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/25.webp" alt="/assets/images/gen/projects/mega-sport-training/25.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>A screenshot of the development of one of the minigames, showing part of the development setup.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/26.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/26.webp" alt="/assets/images/gen/projects/mega-sport-training/26.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>Another screenshot of the development, showing a full setup with the Kinect and a laptop used as simulated remote server to send the player NFC signal to start a new game. <p/><b>FYI:</b> The musseum visitors carries a NFC rubber bracelet that stores some optional metadata that can be used by the interactive experiences like our game (e.g.: the email address where to send the game card at the end or the gender to automatically select player avatar at the start a new game).</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/27.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/27.webp" alt="/assets/images/gen/projects/mega-sport-training/27.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>The game installed in two cabinets in the musseum.</span>
+  </div>
+</div>
+            
+            
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/projects/mega-sport-training/28.webp" target="_blank">
+    <img   src="/assets/images/gen/projects/mega-sport-training/28.webp" alt="/assets/images/gen/projects/mega-sport-training/28.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span>A visitor playing the football game in one of the cabinets.</span>
+  </div>
+</div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

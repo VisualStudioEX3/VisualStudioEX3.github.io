@@ -1,0 +1,2944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Resumen del Freakend 2015 - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-post has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+
+        
+
+
+
+
+
+
+
+
+
+<div class="heading">
+  
+
+  
+  <div class="heading-heading">
+    <h1>Resumen del Freakend 2015</h1>
+  </div>
+  
+
+  
+  <div class="heading-description">
+    <p>Un fin de semana encerrado en una casa rural con 50 frikis del mundo del desarrollo de videjuegos, cervezas y mucho que contar. Eso es, muy resumidamente, el Freakend.</p>
+  </div>
+  
+
+  
+  <div class="heading-image">
+    <img  alt="Resumen del Freakend 2015"  src="/assets/images/gen/posts/2015-03-16-freakend-2015/thumbnail.webp" />
+  </div>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        
+
+        <div class="pb-3">
+          <span>Published on 16 March 2015</span>
+        </div>
+
+        
+          
+
+
+<div class="alert alert-default d-flex align-items-center" role="alert">
+    <i class="bi bi-translate me-2"></i>
+    <div>This post is preserved from the old <b>visualstudioex3.com</b> Wordpress site and his content is presented in the original format and unstranslated from spanish.</div>
+</div>
+        
+
+        <div class="content pb-2">
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/FREAKEND_2015_logo.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/FREAKEND_2015_logo.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Logo diseñado por Jose Luis Triguero Navarro</p>
+    
+  </figcaption>
+</figure>
+
+<p>Freakend, un evento anual a pequeña escala que intenta reunir, durante un fin de semana completo en una casa rural, a un grupo de frikis amantes de los videojuegos, perfiles tanto profesionales como no,  donde se invita a dar charlas de cualquier temática y nivel, siempre relacionado como el mundo del desarrollo de videojuegos. Al igual que el año pasado, quería dejar un pequeño testimonio de este evento, así que he rascado el poco tiempo libre que he tenido esta semana y he preparado este post.</p>
+
+<h1 id="freakend-2015">Freakend 2015</h1>
+
+<p>Hace dos semanas se ha celebrado el cuarto Freakend, mi segundo año, y después de la experiencia del anterior, no me lo quería perder por nada del mundo. Un año más he podido disfrutar de interesantes charlas junto a viejos colegas, habituales de otros Freakends como <a href="https://twitter.com/javisantana">Javi Santana,</a> a la vez que he podido conocer a nuevas personas, como ha sido el caso de mis «vecinos» de trabajo, algunos integrantes de <strong>Mercury Steam</strong>, o reencontrarme incluso con gente que llevaba 10 años sin ver (un saludo, <strong>Cesar Monterde</strong>, un placer volver a saber de ti, stratero!).</p>
+
+<p>Este año el evento ha corrido a cargo de <a href="https://twitter.com/Diegobez">Diego Bezares</a>, que ha tenido la ardua tarea de gestionar y organizar el evento para 50 personas (el año pasado fuimos 30) y aquí le damos las gracias de nuevo por su esfuerzo y tiempo invertido en ello:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Qué complicado es hacer compra para 50. A ver qué tal. <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="http://t.co/P6akf1SXvc">pic.twitter.com/P6akf1SXvc</a></p>&mdash; Diego Bez. (@Diegobez) <a href="https://twitter.com/Diegobez/status/573819094677483520?ref_src=twsrc%5Etfw">March 6, 2015</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>El lugar ha sido el mismo del año pasado, una inmensa casa rural a 20 minutos de Madrid, a la altura de San Agustin del Guadalix (<a href="http://www.fuentecardena.es/casa2.html">web de la casa</a>) en donde disponíamos de un enorme salón donde celebrar las charlas, así como un billar y un futbolin ademas de un minibar donde socializar con los asistentes.</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_004.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_004.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Tomando el fresco antes de empezar el Freakend.</p>
+    
+  </figcaption>
+</figure>
+
+<h1 id="temáticas-de-las-charlas">Temáticas de las charlas</h1>
+
+<p>Este año ha habido charlas enfocadas a temas tales como testing de código y optimización en tecnologías como Unity3D, técnicas avanzadas 3D optimizadas para móviles, sistemas de eventos en animaciones, consejos sobre diseño de GUIs para juegos, maneras de implementar tutoriales en nuestro juego, así como también charlas sobre experiencias en crowdfunding con Kickstarter, producción de videojuegos, distribución digital, y la parte friki este año ha vuelto al terreno de las consolas retro. Si el año pasado toco hablar del MSX, este año hemos tenido charlas sobre desarrollo para la <strong>Game Boy</strong> clásica:</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_044.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_044.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Kartones empezando su charla sobre desarrollo para Game Boy.</p>
+    
+  </figcaption>
+</figure>
+
+<p>Pero desde luego, la novedad este año ha sido el mini concierto que <a href="https://www.youtube.com/channel/UClBiefyGWMjwztUcBYXmKow">Hernan y Mirella</a> nos han brindado la noche del viernes, tocando y cantando temas de videojuegos:</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/4A54SVcHHZ4" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<p>También tuvimos una charla acerca de un clásico importante dentro de los videojuegos españoles, <strong>Blade: The Edge of Darkness,</strong> de mano de uno de sus creadores, <a href="https://twitter.com/Jose_Raluy">José Raluy</a>, quien estuvo hablando sobre el desarrollo y repercursión que tuvo este juego en su día:</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_043.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_043.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>José Raluy en su charla sobre Blade: The Edge of Darkness.</p>
+    
+  </figcaption>
+</figure>
+
+<h1 id="motivos-para-perder-un-finde-en-venir-a-un-freakend">¿Motivos para <del>perder</del> un finde en venir a un Freakend?</h1>
+
+<p>Cuando hablo de este tipo de eventos a colegas o compañeros de trabajo (gente del gremio, profesionales o no) muchas veces me miran raro y me hacen la pregunta: <strong>¿por que voy a perder un finde en ir a un evento así?</strong>. Si algo me ha gustado siempre de este gremio, por llamarlo de alguna forma, es el factor social que tiene la gente que lo forma. Algo que siempre me gusto de este mundillo era conocer gente que le gustara lo mismo que a mi, gente que le gusta compartir su trabajo y sus conocimientos con los demás, gente que al igual que yo quiere conocer a otros como el, gente de quien aprender o incluso con quien llegar a juntarse para sacar adelante proyectos.  Ese es uno de los motivos que me ha mantenido activo durante ya 15 años en los foros de <a href="http://www.stratos-ad.com">Stratos-AD</a>, y lo que me ha empujado durante 5 años a ir a las Campus Party que se celebraban en Valencia (y donde nos reuníamos muchos de los veteranos de Stratos-AD) o durante estos últimos años a Gamelab, y lo mismo que me mueve para ir cualquier encuentro informal como muchos de los que se celebran en Madrid y muchas otras ciudades. Esto me ha permitido conocer a mucha gente, que hoy día esta trabajando en importantes estudios o han formado los suyos propios, gente que no solo son colegas si no que se han convertido en algunos casos en compañeros de trabajo, gente de la que he podido aprender mucho acerca de este mundillo, más allá de temas técnicos sobre desarrollo o programación, si no a niveles de entender como funciona un estudio por dentro y la realidad que se esconde detrás de montar tu propio estudio, aprender a través de la experiencia de los demás.</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_005.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_005.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<p>El Freakend es un escenario donde te encuentras mucho de lo que describo en el párrafo anterior, una invitación a juntarte con un grupo de gente, conocida y desconocida, desde gente experimentada que trabaja en estudios importantes dentro y fuera de España, hasta gente que lleva su propio estudio independiente, o simplemente gente aficionada a este mundillo o que esta empezando. Es una oportunidad de tener 48 horas en las que aprender experiencias de la gente y de ampliar tu circulo de contactos, y eso también es importante, de darte a conocer.</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_016.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_016.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<p>Mi objetivo para el próximo año es lograr convencer a varios compañeros de <a href="http://virtualtoys.net/">Virtual Toys</a> para que se apunten al evento e incluso a que se animen a dar alguna charla, ¿seré capaz de convencerles? ;)</p>
+
+<h1 id="conclusión">Conclusión</h1>
+
+<p>Este año ha estado igual o mejor que el año pasado en cuanto a materia de charlas, aunque si que coincido con la mayoría de la gente, de que este año ha sido algo saturado el numero de ponencias, dejando poco tiempo para hacer networking, que para mi es uno de los puntos fuertes de estos eventos. También este año he echado en falta las sesiones de juego nocturnas que el año pasado nos pegamos (<a href="/blog/freakend-2014">valga de recordatorio mi resumen del año pasado</a>) jugando a juegos de mesa o tratando de controlar el volante en el Gran Turismo 6. Parece que no, pero unas cervezas y juego de mesa de por medio, ayuda mucho también a acercar a la gente en estos ambientes. Por lo demás, la gestión del evento ha estado a la altura, con el catering de calidad como el año pasado:</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_055.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_055.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_056.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_056.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<p>Y sumando a ello la barbacoa de la noche del sábado, gracias a la ayuda y esfuerzo de <a href="https://twitter.com/flipper83">@flipper83</a> y <a href="https://twitter.com/chuel_chuelin">@chuel_chuelin</a>:</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_032.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_032.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Hambre desde luego no pasamos en el Freakend ;)</p>
+    
+  </figcaption>
+</figure>
+
+<h1 id="material-charlas-ygalería-de-fotos">Material, charlas y galería de fotos</h1>
+
+<p>Para finalizar este resumen, este año, a diferencia del anterior, están disponibles la mayoría de las charlas, así que pasen y sírvanse:</p>
+
+<h2 id="jorge-j-barroso">Jorge J. Barroso</h2>
+
+<p>The Good Programmer:</p>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/0B39SXMRp_xSTVTN3NlFjTEd0cjA/view?usp=sharing">Presentación</a></li>
+</ul>
+
+<h2 id="hernán-y-mirella">Hernán y Mirella</h2>
+
+<p>GamesYouHear:</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/4A54SVcHHZ4" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="juan-raigada">Juan Raigada</h2>
+
+<p>Como NO hacer un Kickstarter:</p>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/0B39SXMRp_xSTZG1MQW14N3RrV2c/view">Presentación</a></li>
+</ul>
+
+<h2 id="rafael-muñoz">Rafael Muñoz</h2>
+
+<p>Testing automatico en videojuegos:</p>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/0B39SXMRp_xSTV1lFMU82YWtPbDg/view">Presentación</a></li>
+</ul>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/2zpEMOa5qGw" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="javier-cantón">Javier Cantón</h2>
+
+<p>Como guardar 6 floats en 32bits:</p>
+
+<ul>
+  <li><a href="https://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Eslideshare%2Enet%2FcKhronos%2Flight-pre-pass&amp;urlhash=u4g8&amp;_t=tracking_disc">Presentación</a></li>
+</ul>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/j3juLU0yLxI" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="gonzalo-de-santos">Gonzalo de Santos</h2>
+
+<p>Desarrollo homebrew en nintendo 3DS:</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/F48p9YreUJY" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="crema-games">Crema Games</h2>
+
+<p>Unity Performance:</p>
+
+<ul>
+  <li><a href="http://www.slideshare.net/xYaW/performance-unity-mobile">Presentación</a></li>
+</ul>
+
+<h2 id="nacho-lasheras">Nacho Lasheras</h2>
+
+<p>Anatomia de GUI:</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/4ASH1VAFr_w" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="cesar-monterde">Cesar Monterde</h2>
+
+<p>Tutoriales:</p>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/0B0KKO7QwktCCcHlQZjBvVHlERzg/view">Presentación</a></li>
+</ul>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/6yGsJykCN28" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="kike">Kike</h2>
+
+<p>Postmortem de Heart &amp; Slash:</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/4fn10mYK2PY" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="david-bonilla">David Bonilla</h2>
+
+<p>Distribución digital videojuegos:</p>
+
+<ul>
+  <li><a href="https://speakerdeck.com/davidbonilla/distribucion-digital-de-videojuegos">Presentación</a></li>
+</ul>
+
+<h2 id="kartones">Kartones</h2>
+
+<p>Introducción al desarrollo en GameBoy:</p>
+
+<ul>
+  <li><a href="http://slides.kartones.net/">Presentación</a></li>
+  <li><a href="http://blog.kartones.net/post/Freakend-2015-and-my-Gameboy-Powerpoint-like-ROM">Kartones’ Blog: Freakend 2015 and my Gameboy Powerpoint-like ROM</a></li>
+</ul>
+
+<h2 id="rodrigo-diaz">Rodrigo Diaz</h2>
+
+<p>Retrogamedev: Creando un traductor de IL a Game Boy C:</p>
+
+<ul>
+  <li><a href="http://www.slideshare.net/RodrigoDazTajada/retrogamedev-creando-un-traductor-de-il-a-game-boy-c">Presentación</a></li>
+</ul>
+</div>
+
+        
+        <div class="pt-5">
+          <div class="row">
+    <div class="page-image">
+        <div class="gallery gallery-masonry">
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_001.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_001.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_001.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_002.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_002.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_002.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_003.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_003.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_003.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_004.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_004.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_004.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_005.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_005.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_005.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_006.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_006.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_006.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_007.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_007.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_007.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_008.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_008.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_008.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_009.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_009.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_009.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_010.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_010.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_010.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_011.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_011.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_011.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_012.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_012.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_012.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_013.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_013.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_013.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_014.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_014.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_014.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_015.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_015.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_015.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_016.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_016.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_016.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_017.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_017.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_017.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_018.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_018.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_018.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_019.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_019.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_019.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_020.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_020.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_020.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_021.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_021.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_021.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_022.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_022.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_022.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_023.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_023.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_023.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_024.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_024.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_024.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_025.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_025.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_025.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_026.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_026.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_026.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_027.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_027.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_027.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_028.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_028.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_028.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_029.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_029.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_029.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_030.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_030.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_030.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_031.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_031.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_031.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_032.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_032.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_032.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_033.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_033.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_033.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_034.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_034.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_034.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_035.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_035.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_035.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_036.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_036.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_036.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_037.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_037.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_037.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_038.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_038.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_038.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_039.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_039.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_039.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_040.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_040.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_040.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_041.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_041.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_041.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_042.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_042.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_042.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_043.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_043.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_043.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_044.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_044.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_044.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_045.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_045.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_045.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_046.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_046.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_046.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_047.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_047.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_047.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_048.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_048.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_048.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_049.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_049.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_049.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_050.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_050.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_050.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_051.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_051.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_051.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_052.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_052.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_052.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_053.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_053.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_053.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_054.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_054.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_054.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_055.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_055.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_055.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_056.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_056.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_056.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_057.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_057.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_057.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_058.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_058.webp" alt="/assets/images/gen/posts/2015-03-16-freakend-2015/freakend_2015_058.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    var grid = document.querySelector('.gallery');
+    var msnry;
+
+    imagesLoaded(grid, function () {
+        msnry = new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            percentPosition: true,
+            horizontalOrder: true
+        });
+    });
+</script>
+        </div>
+        
+
+        <div class="pt-5">
+          
+          <span>Categories</span>
+          <div class="categories">
+            <div class="d-flex flex-wrap">
+              
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/events">
+    Events
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/freakend">
+    Freakend
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/archive">
+    Archive
+  </a>
+  
+</div>
+
+
+            </div>
+          </div>
+          
+
+          
+          
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/blog/freakend-2015';
+    this.page.identifier = 'http://localhost:4000/blog/freakend-2015';
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Serialización de datos en .NET: como exportar e importar datos de nuestro juego en archivos fácilmente - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-post has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+
+        
+
+
+
+
+
+
+
+
+
+<div class="heading">
+  
+
+  
+  <div class="heading-heading">
+    <h1>Serialización de datos en .NET: como exportar e importar datos de nuestro juego en archivos fácilmente</h1>
+  </div>
+  
+
+  
+
+  
+  <div class="heading-image">
+    <img  alt="Serialización de datos en .NET: como exportar e importar datos de nuestro juego en archivos fácilmente"  src="/assets/images/gen/posts/2012-09-06-dotnet-serialization-for-gamedata/thumbnail.webp" />
+  </div>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        
+
+        <div class="pb-3">
+          <span>Published on 06 September 2012</span>
+        </div>
+
+        
+          
+
+
+<div class="alert alert-default d-flex align-items-center" role="alert">
+    <i class="bi bi-translate me-2"></i>
+    <div>This post is preserved from the old <b>visualstudioex3.com</b> Wordpress site and his content is presented in the original format and unstranslated from spanish.</div>
+</div>
+        
+
+        <div class="content pb-2"><p>No hace mucho un compañero de los foros de <a href="http://www.stratos-ad.com">Stratos-AD</a> venia preguntando como podría implementar un sistema para guardar partidas de su juego en <strong>XNA</strong> y después volver a cargarlas, no en si el como el organizar los datos e información del juego y como gestionarlo en un archivo si no en si como podría exportar e importar fácilmente información a un archivo en disco. Esto me recordó que yo en su día, cuando empece a programar en <strong>.NET</strong>, me encontré con el mismo problema y que esto es una duda que a muchos nos surge.</p>
+
+<p>En <strong>Visual Basic 6.0</strong>, donde estuve muchos años programando, esto era relativamente fácil ya que mediante las funciones integradas para gestionar la escritura y lectura de archivos en formato binario era tan fácil como pasar la propia variable de estructura de datos como parámetro a escribir o leer, <strong>Visual Basic 6.0</strong> se encargaba de volcar en formato binario el contenido integro de la variable y despues permitía volver a crear la variable con el mismo contenido. Supongo que en <strong>C/C++</strong> sera igual de directo, sin embargo en <strong>.NET</strong> ya no era tan fácil, no al menos de la misma forma. Aquí no podías llamar a las funciones de <strong>System.IO</strong> y decirle que te volcara la variable directamente en un archivo. Sin embargo si que existe una manera sencilla de hacer esto, mediante la serialización a <strong>XML</strong>.</p>
+
+<p>Resumiendo mucho, la serialización a <strong>XML</strong> es un mecanismo que permite convertir una estructura de datos en una estructura de texto en formato <strong>XML</strong>. Este mecanismo esta presente en varias tecnologías de programación como <strong>.NET</strong> o <strong>Java</strong>. Yo voy a explicar mi ejemplo en <strong>.NET</strong> mediante <strong>C#</strong>.</p>
+
+<h1 id="ejemplo-practico">Ejemplo practico</h1>
+
+<p>El siguiente código muestra una función para serializar y otra para deserializar contenido de un archivo XML:</p>
+
+<h5 id="xmlserializercs">XMLSerializer.cs</h5>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml.Serialization</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EjemploSerializacion</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Funciones de serialización XML.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">XMLSerializer</span>
+    <span class="p">{</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Serializa un objeto a un archivo XML.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="data"&gt;Objeto a serializar a XML.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="filename"&gt;Archivo XML a generar.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">data</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">XmlSerializer</span> <span class="n">mySerializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="nf">GetType</span><span class="p">());</span>
+            <span class="n">StreamWriter</span> <span class="n">myWriter</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamWriter</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+            <span class="n">mySerializer</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">myWriter</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+            <span class="n">myWriter</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Deserializa un archivo XML a objeto.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;typeparam name="T"&gt;Tipo del objeto a deserializar.&lt;/typeparam&gt;</span>
+        <span class="c1">/// &lt;param name="filename"&gt;Archivo XML a deserializar.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;returns&gt;Devuelve una instancia del objeto serializado en el archivo XML.&lt;/returns&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">Deserialize</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">XmlSerializer</span> <span class="n">mySerializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">T</span><span class="p">));</span>
+            <span class="n">FileStream</span> <span class="n">myFileStream</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">FileStream</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">FileMode</span><span class="p">.</span><span class="n">Open</span><span class="p">);</span>
+            <span class="n">T</span> <span class="n">ret</span> <span class="p">=</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="n">mySerializer</span><span class="p">.</span><span class="nf">Deserialize</span><span class="p">(</span><span class="n">myFileStream</span><span class="p">);</span>
+            <span class="n">myFileStream</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Estas dos funciones permiten exportar como importar la estructura de campos públicos de cualquier tipo de clase en formato XML de forma sencilla y rápida. Veamos un ejemplo. Imaginemos que tenemos una estructura que define estados de nuestro jugador, una estructura tal que a si:</p>
+
+<h5 id="playercs">Player.cs</h5>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EjemploSerializacion</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Player</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span><span class="p">;</span>             <span class="c1">// Nombre del jugador.</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Life</span><span class="p">;</span>                <span class="c1">// Puntos de vida.</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Shield</span><span class="p">;</span>              <span class="c1">// Puntos de escudo.</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Xp</span><span class="p">;</span>                  <span class="c1">// Puntos de experiencia.</span>
+        <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Weapon</span><span class="p">&gt;</span> <span class="n">Weapons</span><span class="p">;</span>    <span class="c1">// Lista de armas y su estado.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="weaponcs">Weapon.cs</h5>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EjemploSerializacion</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Weapon</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span><span class="p">;</span>     <span class="c1">// Nombre del arma.</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Ammo</span><span class="p">;</span>        <span class="c1">// Municion.</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Level</span><span class="p">;</span>       <span class="c1">// Nivel del arma.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Rellenamos de datos la estructura:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Player</span> <span class="n">player</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Player</span><span class="p">();</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"John Deckard"</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Life</span> <span class="p">=</span> <span class="m">100</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Shield</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Xp</span> <span class="p">=</span> <span class="m">50</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Weapon</span><span class="p">&gt;();</span>
+
+<span class="n">Weapon</span> <span class="n">mp5</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Weapon</span><span class="p">();</span>
+<span class="n">mp5</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"H&amp;K MP5"</span><span class="p">;</span>
+<span class="n">mp5</span><span class="p">.</span><span class="n">Ammo</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span>
+<span class="n">mp5</span><span class="p">.</span><span class="n">Level</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">mp5</span><span class="p">);</span>
+
+<span class="n">Weapon</span> <span class="n">desertEagle</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Weapon</span><span class="p">();</span>
+<span class="n">desertEagle</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"IMI Desert Eagle"</span><span class="p">;</span>
+<span class="n">desertEagle</span><span class="p">.</span><span class="n">Ammo</span> <span class="p">=</span> <span class="m">17</span><span class="p">;</span>
+<span class="n">desertEagle</span><span class="p">.</span><span class="n">Level</span> <span class="p">=</span> <span class="m">13</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">desertEagle</span><span class="p">);</span>
+
+<span class="n">Weapon</span> <span class="n">knife</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Weapon</span><span class="p">();</span>
+<span class="n">knife</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"Knife"</span><span class="p">;</span>
+<span class="n">knife</span><span class="p">.</span><span class="n">Ammo</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="n">knife</span><span class="p">.</span><span class="n">Level</span> <span class="p">=</span> <span class="m">30</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">knife</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Ahora para exportar esta estructura en un paso a un archivo XML tan solo tendríamos que hacer la siguiente llamada a nuestra clase <strong>XMLSerializer</strong>:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">XMLSerializers</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="s">"playerState.xml"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>El resultado del archivo <strong>playerState.xml</strong> seria el siguiente:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;Player</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Name&gt;</span>John Deckard<span class="nt">&lt;/Name&gt;</span>
+  <span class="nt">&lt;Life&gt;</span>100<span class="nt">&lt;/Life&gt;</span>
+  <span class="nt">&lt;Shield&gt;</span>25<span class="nt">&lt;/Shield&gt;</span>
+  <span class="nt">&lt;Xp&gt;</span>50<span class="nt">&lt;/Xp&gt;</span>
+  <span class="nt">&lt;Weapons&gt;</span>
+    <span class="nt">&lt;Weapon&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>H<span class="ni">&amp;amp;</span>K MP5<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;Ammo&gt;</span>32<span class="nt">&lt;/Ammo&gt;</span>
+      <span class="nt">&lt;Level&gt;</span>25<span class="nt">&lt;/Level&gt;</span>
+    <span class="nt">&lt;/Weapon&gt;</span>
+    <span class="nt">&lt;Weapon&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>IMI Desert Eagle<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;Ammo&gt;</span>17<span class="nt">&lt;/Ammo&gt;</span>
+      <span class="nt">&lt;Level&gt;</span>13<span class="nt">&lt;/Level&gt;</span>
+    <span class="nt">&lt;/Weapon&gt;</span>
+    <span class="nt">&lt;Weapon&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Knife<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;Ammo&gt;</span>0<span class="nt">&lt;/Ammo&gt;</span>
+      <span class="nt">&lt;Level&gt;</span>30<span class="nt">&lt;/Level&gt;</span>
+    <span class="nt">&lt;/Weapon&gt;</span>
+  <span class="nt">&lt;/Weapons&gt;</span>
+<span class="nt">&lt;/Player&gt;</span>
+</code></pre></div></div>
+
+<p>Como podéis ver el resultado es un formato muy legible y fácil de editar a mano si fuese necesario. Ahora veamos el proceso a la inversa, crear una variable de la clase <strong>Player</strong> e inicializarla con el contenido del archivo XML que hemos generado:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Player</span> <span class="n">player</span> <span class="p">=</span> <span class="n">XMLSerializers</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">&lt;</span><span class="n">Player</span><span class="p">&gt;(</span><span class="s">"playerState.xml"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>La variable <strong>player</strong> se ha inicializado con todo el contenido original del archivo XML.</p>
+
+<p>Como veis, el sistema es muy sencillo de usar e implementar. Es una manera rápida de poder almacenar información útil en archivo y volver a cargarla después para trabajar con ella, puede ser útil por ejemplo a la hora de desarrollar herramientas para edición de niveles, para guardar la configuración del juego, o como en el caso del compañero de <strong>Stratos-AD</strong>, para crear el mecanismo de salvar y cargar partidas.</p>
+
+<h1 id="detalles-a-tener-en-cuenta-de-los-serializadores">Detalles a tener en cuenta de los serializadores</h1>
+
+<p>En principio este sistema permite exportar cualquier tipo de dato a XML, pero en verdad no es así. Habra tipos de datos que por unos motivos u otros no se pueda serializar. Sin ir muy lejos, el objeto <strong>Dictionary&lt;&gt;</strong> no es serializable. Eso plantea un problema si en vez de serializar un array o una lista queremos serializar un diccionario. Pero para todo hay solución. El siguiente código, basado en el original de <a href="http://johnwsaundersiii.spaces.live.com/blog/cns!600A2BE4A82EA0A6!699.entry">John Saunders</a>, define una clase que emula un diccionario de .NET pero de forma que sea serializable:</p>
+
+<h5 id="serializabledictionarycs">SerializableDictionary.cs</h5>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">/// Codigo basado en el original de John Saunders de su articulo "One Way to Serialize Dictionaries"</span>
+<span class="c1">/// http://johnwsaundersiii.spaces.live.com/blog/cns!600A2BE4A82EA0A6!699.entry</span>
+
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.ObjectModel</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml.Serialization</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EjemploSerializacion</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Clase Diccionario que soporta serialización a XML.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="c1">/// &lt;typeparam name="K"&gt;Tipo de dato de la clave.&lt;/typeparam&gt;</span>
+    <span class="c1">/// &lt;typeparam name="V"&gt;Tipo de dato del valor.&lt;/typeparam&gt;</span>
+    <span class="c1">/// &lt;remarks&gt;Los serializadores XML de .NET (el InmediateXMLSerializer de XNA no se ve afectado) no puede serializar clases que implementen la interfaz IDictionary. Esta clase implementa las funcionalidades de un diccionario (IDictionary) pero con capacidad para ser serializado a XML.&lt;/remarks&gt;</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SerializableDictionary</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="err">#</span><span class="n">region</span> <span class="n">Construction</span> <span class="k">and</span> <span class="n">Initialization</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Constructor de la clase.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="original"&gt;Diccionario (IDictionary) que se usara para inicializar la clase.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="nf">SerializableDictionary</span><span class="p">(</span><span class="n">IDictionary</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">&gt;</span> <span class="n">original</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span> <span class="p">=</span> <span class="n">original</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Constructor de la clase.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="nf">SerializableDictionary</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span><span class="n">V</span><span class="p">&gt;();</span>
+        <span class="p">}</span>
+        <span class="err">#</span><span class="n">endregion</span>
+
+        <span class="err">#</span><span class="n">region</span> <span class="n">Interfaz</span> <span class="n">similar</span> <span class="n">a</span> <span class="n">IDictionary</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Añade un elemento al diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="Key"&gt;Clave del elemento.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="Value"&gt;Valor del elemento.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Add</span><span class="p">(</span><span class="n">K</span> <span class="n">Key</span><span class="p">,</span> <span class="n">V</span> <span class="n">Value</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">Key</span><span class="p">,</span> <span class="n">Value</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Añade un elemento al diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="item"&gt;Elemento a añadir.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Add</span><span class="p">(</span><span class="n">SerializableKeyValuePair</span> <span class="n">item</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">ToKeyValuePair</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Elimina un elemento del diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="Key"&gt;Clave del elemento.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Remove</span><span class="p">(</span><span class="n">K</span> <span class="n">Key</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="nf">Remove</span><span class="p">(</span><span class="n">Key</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Elimina un elemento del diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="item"&gt;Elemento a eliminar.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Remove</span><span class="p">(</span><span class="n">SerializableKeyValuePair</span> <span class="n">item</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="nf">Remove</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">ToKeyValuePair</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Devuelve la lista de valores del diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="p">[</span><span class="n">XmlIgnore</span><span class="p">]</span>
+        <span class="k">public</span> <span class="n">ReadOnlyCollection</span><span class="p">&lt;</span><span class="n">V</span><span class="p">&gt;</span> <span class="n">Values</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="nf">RebuildInternalDictionary</span><span class="p">();</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="n">Values</span><span class="p">.</span><span class="n">ToList</span><span class="p">&lt;</span><span class="n">V</span><span class="p">&gt;().</span><span class="nf">AsReadOnly</span><span class="p">();</span> <span class="p">}</span> <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Devuelve la lista de claves del diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="p">[</span><span class="n">XmlIgnore</span><span class="p">]</span>
+        <span class="k">public</span> <span class="n">ReadOnlyCollection</span><span class="p">&lt;</span><span class="n">K</span><span class="p">&gt;</span> <span class="n">Keys</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="nf">RebuildInternalDictionary</span><span class="p">();</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="n">Keys</span><span class="p">.</span><span class="n">ToList</span><span class="p">&lt;</span><span class="n">K</span><span class="p">&gt;().</span><span class="nf">AsReadOnly</span><span class="p">();</span> <span class="p">}</span> <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Propiedad por defecto del diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="key"&gt;Clave del elemento.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;returns&gt;Devuelve el elemento del diccionario con la clave indicada.&lt;/returns&gt;</span>
+        <span class="c1">/// &lt;remarks&gt;Esta propiedad permite acceder directamente a la lista de elementos pasando como parametro la clave, de igual forma a como se haria con un Dictionary(IDictionary).&lt;/remarks&gt;</span>
+        <span class="p">[</span><span class="n">XmlIgnore</span><span class="p">]</span>
+        <span class="k">public</span> <span class="n">V</span> <span class="k">this</span><span class="p">[</span><span class="n">K</span> <span class="n">key</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="nf">RebuildInternalDictionary</span><span class="p">();</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">];</span> <span class="p">}</span> <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Numero de elementos del diccionario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="p">[</span><span class="n">XmlIgnore</span><span class="p">]</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">Count</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="nf">RebuildInternalDictionary</span><span class="p">();</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+        <span class="err">#</span><span class="n">endregion</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Reconstruye el diccionario interno si la lista tiene datos.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;remarks&gt;Este metodo se implementa para los casos en que la instancia de la clase ha sido generada a</span>
+        <span class="c1">/// partir de deseriaizacion ya que el diccionario interno no se reconstruye automaticamente.&lt;/remarks&gt;</span>
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">RebuildInternalDictionary</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="n">_list</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="n">_list</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">foreach</span> <span class="p">(</span><span class="n">SerializableKeyValuePair</span> <span class="n">kvp</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="n">_list</span><span class="p">)</span>
+                    <span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">kvp</span><span class="p">.</span><span class="nf">ToKeyValuePair</span><span class="p">());</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="err">#</span><span class="n">region</span> <span class="n">The</span> <span class="n">Proxy</span> <span class="n">List</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Acceso al diccionario (IDictionary) interno.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="p">[</span><span class="n">XmlIgnore</span><span class="p">]</span>
+    <span class="k">public</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">&gt;</span> <span class="n">Dictionary</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">internal</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Holds the keys and values</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SerializableKeyValuePair</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">K</span> <span class="n">Key</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="n">V</span> <span class="n">Value</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Convertir clase a KeyValuePair.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;returns&gt;Devuelve una instancia de KeyValuePair para ser usada con el diccionario (IDictionary) interno de la clase.&lt;/returns&gt;</span>
+        <span class="k">internal</span> <span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">&gt;</span> <span class="nf">ToKeyValuePair</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">&gt;(</span><span class="k">this</span><span class="p">.</span><span class="n">Key</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// This field will store the deserialized list</span>
+    <span class="k">private</span> <span class="n">Collection</span><span class="p">&lt;</span><span class="n">SerializableKeyValuePair</span><span class="p">&gt;</span> <span class="n">_list</span><span class="p">;</span>
+
+    <span class="c1">/// &lt;remarks&gt;</span>
+    <span class="c1">/// XmlElementAttribute is used to prevent extra nesting level. It's</span>
+    <span class="c1">/// not necessary.</span>
+    <span class="c1">/// &lt;/remarks&gt;</span>
+    <span class="p">[</span><span class="n">XmlElement</span><span class="p">]</span>
+    <span class="k">public</span> <span class="n">Collection</span><span class="p">&lt;</span><span class="n">SerializableKeyValuePair</span><span class="p">&gt;</span> <span class="n">KeysAndValues</span>
+    <span class="p">{</span>
+        <span class="k">get</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">_list</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">_list</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Collection</span><span class="p">&lt;</span><span class="n">SerializableKeyValuePair</span><span class="p">&gt;();</span>
+            <span class="p">}</span>
+
+            <span class="c1">// On deserialization, Original will be null, just return what we have</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Dictionary</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">_list</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// If Original was present, add each of its elements to the list</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="n">_list</span><span class="p">.</span><span class="nf">Clear</span><span class="p">();</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">Dictionary</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">_list</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">SerializableKeyValuePair</span> <span class="p">{</span> <span class="n">Key</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">,</span> <span class="n">Value</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Value</span> <span class="p">});</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">_list</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="err">#</span><span class="n">endregion</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Convenience method to return a dictionary from this proxy instance</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;returns&gt;&lt;/returns&gt;</span>
+        <span class="k">public</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">&gt;</span> <span class="nf">ToDictionary</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">KeysAndValues</span><span class="p">.</span><span class="nf">ToDictionary</span><span class="p">(</span><span class="n">key</span> <span class="p">=&gt;</span> <span class="n">key</span><span class="p">.</span><span class="n">Key</span><span class="p">,</span> <span class="k">value</span> <span class="p">=&gt;</span> <span class="k">value</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Veamos un ejemplo de como quedaría serializada esta clase. Vamos cambiar en la clase <strong>Player</strong> el tipo de dato <strong>List</strong> al miembro <strong>Weapons</strong> por <strong>SerializableDictionary</strong>:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="n">SerializableDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">Weapon</span><span class="p">&gt;</span> <span class="n">Weapons</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>El codigo de inicializacion del objeto <strong>Player</strong> quedaria asi:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Player</span> <span class="n">player</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Player</span><span class="p">();</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"John Deckard"</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Life</span> <span class="p">=</span> <span class="m">100</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Shield</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Xp</span> <span class="p">=</span> <span class="m">50</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SerializableDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">Weapon</span><span class="p">&gt;();</span>
+
+<span class="n">Weapon</span> <span class="n">mp5</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Weapon</span><span class="p">();</span>
+<span class="n">mp5</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"H&amp;K MP5"</span><span class="p">;</span>
+<span class="n">mp5</span><span class="p">.</span><span class="n">Ammo</span> <span class="p">=</span> <span class="m">32</span><span class="p">;</span>
+<span class="n">mp5</span><span class="p">.</span><span class="n">Level</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"MP5"</span><span class="p">,</span> <span class="n">mp5</span><span class="p">);</span>
+
+<span class="n">Weapon</span> <span class="n">desertEagle</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Weapon</span><span class="p">();</span>
+<span class="n">desertEagle</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"IMI Desert Eagle"</span><span class="p">;</span>
+<span class="n">desertEagle</span><span class="p">.</span><span class="n">Ammo</span> <span class="p">=</span> <span class="m">17</span><span class="p">;</span>
+<span class="n">desertEagle</span><span class="p">.</span><span class="n">Level</span> <span class="p">=</span> <span class="m">13</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Desert Eagle"</span><span class="p">,</span> <span class="n">desertEagle</span><span class="p">);</span>
+
+<span class="n">Weapon</span> <span class="n">knife</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Weapon</span><span class="p">();</span>
+<span class="n">knife</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"Knife"</span><span class="p">;</span>
+<span class="n">knife</span><span class="p">.</span><span class="n">Ammo</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="n">knife</span><span class="p">.</span><span class="n">Level</span> <span class="p">=</span> <span class="m">30</span><span class="p">;</span>
+<span class="n">player</span><span class="p">.</span><span class="n">Weapons</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Knife"</span><span class="p">,</span> <span class="n">knife</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Al exportarlo a XML quedaría así el resultado:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;Player</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xmlns:xsd=</span><span class="s">"http://www.w3.org/2001/XMLSchema"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Name&gt;</span>John Deckard<span class="nt">&lt;/Name&gt;</span>
+  <span class="nt">&lt;Life&gt;</span>100<span class="nt">&lt;/Life&gt;</span>
+  <span class="nt">&lt;Shield&gt;</span>25<span class="nt">&lt;/Shield&gt;</span>
+  <span class="nt">&lt;Xp&gt;</span>50<span class="nt">&lt;/Xp&gt;</span>
+  <span class="nt">&lt;Weapons&gt;</span>
+    <span class="nt">&lt;KeysAndValues&gt;</span>
+      <span class="nt">&lt;Key&gt;</span>MP5<span class="nt">&lt;/Key&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>
+        <span class="nt">&lt;Name&gt;</span>H<span class="ni">&amp;amp;</span>K MP5<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;Ammo&gt;</span>32<span class="nt">&lt;/Ammo&gt;</span>
+        <span class="nt">&lt;Level&gt;</span>25<span class="nt">&lt;/Level&gt;</span>
+      <span class="nt">&lt;/Value&gt;</span>
+    <span class="nt">&lt;/KeysAndValues&gt;</span>
+    <span class="nt">&lt;KeysAndValues&gt;</span>
+      <span class="nt">&lt;Key&gt;</span>Desert Eagle<span class="nt">&lt;/Key&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>
+        <span class="nt">&lt;Name&gt;</span>IMI Desert Eagle<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;Ammo&gt;</span>17<span class="nt">&lt;/Ammo&gt;</span>
+        <span class="nt">&lt;Level&gt;</span>13<span class="nt">&lt;/Level&gt;</span>
+      <span class="nt">&lt;/Value&gt;</span>
+    <span class="nt">&lt;/KeysAndValues&gt;</span>
+    <span class="nt">&lt;KeysAndValues&gt;</span>
+      <span class="nt">&lt;Key&gt;</span>Knife<span class="nt">&lt;/Key&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>
+        <span class="nt">&lt;Name&gt;</span>Knife<span class="nt">&lt;/Name&gt;</span>
+        <span class="nt">&lt;Ammo&gt;</span>0<span class="nt">&lt;/Ammo&gt;</span>
+        <span class="nt">&lt;Level&gt;</span>30<span class="nt">&lt;/Level&gt;</span>
+      <span class="nt">&lt;/Value&gt;</span>
+    <span class="nt">&lt;/KeysAndValues&gt;</span>
+  <span class="nt">&lt;/Weapons&gt;</span>
+<span class="nt">&lt;/Player&gt;</span>
+</code></pre></div></div>
+
+<h1 id="se-puede-usar-la-serialización-xml-en-xna-y-en-xbox360">¿Se puede usar la serialización XML en XNA y en XBox360?</h1>
+
+<p>Desde luego. <a href="/projects/grey-infection">GreyInfection</a> utiliza el sistema de serialización para la definición de los niveles, el formato de animación de los sprites y tiles, para guardar la configuración del juego y para guardar el progreso del mismo. Lo único que la forma de acceder directamente al archivo no es tan directa como en <strong>Windows</strong>. En un proyecto de <strong>XBox360</strong>, obviando el <strong>Content Manager</strong>, puedes meter recursos en directorio local del juego, aunque no podrás escribir en esta ubicación. En <strong>GreyInfection</strong> los niveles y esquemas de animación están en una carpeta local. Para leer desde la carpeta local habría usar esta variante de la función de deserialización:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Añadimos esta linea a la cabecera de la clase:</span>
+<span class="k">using</span> <span class="nn">Microsoft.Xna.Framework</span><span class="p">;</span>
+
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// Deserializa un archivo XML a objeto.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="c1">/// &lt;typeparam name="T"&gt;Tipo del objeto a deserializar.&lt;/typeparam&gt;</span>
+<span class="c1">/// &lt;param name="filename"&gt;Archivo XML a deserializar.&lt;/param&gt;</span>
+<span class="c1">/// &lt;returns&gt;Devuelve el contenido del XML en el formato indicado.&lt;/returns&gt;</span>
+<span class="c1">/// &lt;remarks&gt;Esta funcion permite deserializar archivos XML desde el Title Storage.&lt;/remarks&gt;</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">DeserializeFromTitleStorage</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">XmlSerializer</span> <span class="n">mySerializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">T</span><span class="p">));</span>
+    <span class="n">Stream</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">TitleContainer</span><span class="p">.</span><span class="nf">OpenStream</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+    <span class="n">T</span> <span class="n">ret</span> <span class="p">=</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="n">mySerializer</span><span class="p">.</span><span class="nf">Deserialize</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+    <span class="n">stream</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Supongamos que tenemos una carpeta del proyecto XNA que se llama Levels donde tenemos definidos los niveles de nuestro juego, la forma de cargarlo seria de esta manera:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MiClase</span> <span class="n">level</span> <span class="p">=</span> <span class="n">XMLSerializer</span><span class="p">.</span><span class="n">DeserializeFromTitleStorage</span><span class="p">&lt;</span><span class="n">MiClase</span><span class="p">&gt;(</span><span class="s">"Levels/Level0.xml"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Dos cosas a tener en cuenta si usáis este método en vuestros proyectos de XNA:</p>
+
+<ul>
+  <li>Para que el directorio que añadís y sus archivos se compilen con el proyecto debéis indicar en la propiedad <strong>Copiar en el directorio de resultados</strong> de cada archivo (se puede hacer en bloque esta operación) el valor <strong>Copiar si es posterior</strong> ya que de lo contrario al ejecutar el proyecto los archivos no estarían en su ubicación.</li>
+  <li>El formato de las rutas de acceso a los archivos no trabaja con la barra de separación de directorios \ si no con la /.</li>
+</ul>
+
+<p>Para trabajar archivos en modo lectura y escritura, para guardar y poder recuperar datos, debemos trabajar con los <a href="http://msdn.microsoft.com/en-us/library/bb200105.aspx">StorageDevice</a> de <strong>XNA</strong> que es el mecanismo que ofrece para trabajar en <strong>XBox360</strong> con archivos. Desde los <strong>StorageDevices</strong> podemos usar las funciones <strong>Serialize</strong> y <strong>Deserialize</strong> que usamos en <strong>Windows</strong>.</p>
+
+<p>Un detalle importante. Desde <strong>XNA 4.0</strong> se soportan archivos <strong>XML</strong> en el <strong>Content Manager</strong> del proyecto. El XML que generamos con los serializadores no es valido para el <strong>Content Manager</strong>. XNA usa un mecanismo propio para generar y leer estructuras XML, como el que podéis ver por ejemplo en los archivos de fuentes de texto, <strong>SpriteFonts</strong>, que agregamos a los proyectos. XNA ofrece una forma muy fácil de cargar XML desde su <strong>Content Manager</strong>, tan sencilla como cargar cualquier otro tipo de asset desde allí, pero no ofrece mecanismo similar para generar dichos XML. Pues bien, existe una forma de hacerlo mediante XNA pero tiene el inconveniente de que usa una versión del Framework de .NET que no es la que utiliza a la hora de compilar los proyectos y que solo esta disponible para <strong>Windows</strong>, el <a href="http://blogs.msdn.com/b/shawnhar/archive/2008/08/12/teaching-a-man-to-fish.aspx">IntermediateSerializer</a>.</p>
+
+<p>Este sistema puede llegar a ser muy útil ya que nos permitirá generar archivos XML y cargarlos desde el <strong>Content Manager</strong> de forma limpia, ademas de que tiene la peculiaridad de que si permite serializar clases como <strong>Dictionary&lt;&gt;</strong> que los serializadores normales no pueden. La idea de usar este sistema seria para herramientas como editores de contenido del juego, un editor de niveles por ejemplo.</p>
+
+<p>Para poder usar el serializador de XNA crear un proyecto nuevo y desde la pestaña de propiedades cambiar el <strong>Framework de .NET</strong> de <strong>.NET Framework 4 Client Profile</strong> a <strong>.NET Framework 4</strong>. Con esto ya tenemos acceso al siguiente espacio de nombres:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Microsoft</span><span class="p">.</span><span class="n">Xna</span><span class="p">.</span><span class="n">Framework</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">Pipeline</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">Intermediate</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Con esto ya podréis usar el siguiente código para generar archivos XML legibles desde el <strong>Content Manager</strong> de XNA:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate</span><span class="p">;</span>
+
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// Serializa un objeto a XML de forma que se pueda importar desde el Content Manager de XNA.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="c1">/// &lt;param name="data"&gt;Referencia al objeto a serializar.&lt;/param&gt;</span>
+<span class="c1">/// &lt;param name="filename"&gt;Nombre del archivo XML que contendra la informacion del objeto serializado.&lt;/param&gt;</span>
+<span class="c1">/// &lt;remarks&gt;Este codigo solo funciona en Windows y con el Target Framework ".NET Framework 4" para permitir el espacio de nombres</span>
+<span class="c1">/// Microsoft.Xna.Framework.Content.Pipeline.Serialization.Intermediate (referencia: Microsoft.Xna.Framework.Content.Pipeline).</span>
+<span class="c1">/// Los objetos a deserializar deben estar declarados en una libreria externa al proyecto del juego y debe ser agregada como</span>
+<span class="c1">/// referencia al proyecto de Content.&lt;/remarks&gt;</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">SerializeToXMLContentFormat</span><span class="p">(</span><span class="kt">object</span> <span class="n">data</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">XmlWriterSettings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlWriterSettings</span><span class="p">();</span>
+    <span class="n">settings</span><span class="p">.</span><span class="n">Indent</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">XmlWriter</span> <span class="n">writer</span> <span class="p">=</span> <span class="n">XmlWriter</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">settings</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">IntermediateSerializer</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="k">null</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Luego la carga del XML desde XNA seria así de sencilla:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Miclase</span> <span class="n">variable</span> <span class="p">=</span> <span class="n">Content</span><span class="p">.</span><span class="n">Load</span><span class="p">&lt;</span><span class="n">MiClase</span><span class="p">&gt;(</span><span class="s">"nombre del asset"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Hay que tener en cuenta que para que funcione correctamente los XML que generamos con este método la clase que serializamos ha de estar visible tanto por el proyecto del juego como por el proyecto del <strong>Content Manager</strong>, eso se soluciona creando un proyecto de biblioteca (una DLL) que añadiremos como referencia a ambos proyectos.</p>
+
+<h1 id="windows-phone-permite-tambien-trabajar-con-serialización-de-archivos">¿Windows Phone permite tambien trabajar con serialización de archivos?</h1>
+
+<p>En <strong>Windows Phone</strong> también podríamos usar la serialización a <strong>XML</strong> solo que adaptando el código a como trabaja <strong>Windows Phone</strong> los accesos a archivos, que se realizan mediante los <a href="http://msdn.microsoft.com/es-ES/library/ff604992(v=xnagamestudio.40).aspx">IsolatedStorages</a> de <strong>System.IO</strong>. El código de las funciones <strong>Serialize</strong> y <strong>Deserialize</strong> para <strong>Windows Phone</strong> quedarían así:</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// Serializa un objeto a un archivo XML.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="c1">/// &lt;param name="data"&gt;Objeto a serializar a XML.&lt;/param&gt;</span>
+<span class="c1">/// &lt;param name="filename"&gt;Archivo XML a generar.&lt;/param&gt;</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">data</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">XmlWriterSettings</span> <span class="n">xmlWriterSettings</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlWriterSettings</span><span class="p">();</span>
+    <span class="n">xmlWriterSettings</span><span class="p">.</span><span class="n">Indent</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+    <span class="k">using</span> <span class="p">(</span><span class="n">IsolatedStorageFile</span> <span class="n">myIsolatedStorage</span> <span class="p">=</span> <span class="n">IsolatedStorageFile</span><span class="p">.</span><span class="nf">GetUserStoreForApplication</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="n">IsolatedStorageFileStream</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">myIsolatedStorage</span><span class="p">.</span><span class="nf">OpenFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">FileMode</span><span class="p">.</span><span class="n">Create</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">XmlSerializer</span> <span class="n">serializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="nf">GetType</span><span class="p">());</span>
+            <span class="k">using</span> <span class="p">(</span><span class="n">XmlWriter</span> <span class="n">xmlWriter</span> <span class="p">=</span> <span class="n">XmlWriter</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">xmlWriterSettings</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">serializer</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">xmlWriter</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// Deserializa un archivo XML a objeto.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="c1">/// &lt;typeparam name="T"&gt;Tipo del objeto a deserializar.&lt;/typeparam&gt;</span>
+<span class="c1">/// &lt;param name="filename"&gt;Archivo XML a deserializar.&lt;/param&gt;</span>
+<span class="c1">/// &lt;returns&gt;Devuelve una instancia del objeto serializado en el archivo XML.&lt;/returns&gt;</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">Deserialize</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">try</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="p">(</span><span class="n">IsolatedStorageFile</span> <span class="n">myIsolatedStorage</span> <span class="p">=</span> <span class="n">IsolatedStorageFile</span><span class="p">.</span><span class="nf">GetUserStoreForApplication</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">using</span> <span class="p">(</span><span class="n">IsolatedStorageFileStream</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">myIsolatedStorage</span><span class="p">.</span><span class="nf">OpenFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">FileMode</span><span class="p">.</span><span class="n">Open</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">XmlSerializer</span> <span class="n">serializer</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">T</span><span class="p">));</span>
+                <span class="k">return</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="n">serializer</span><span class="p">.</span><span class="nf">Deserialize</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">catch</span>
+    <span class="p">{</span>
+        <span class="k">throw</span><span class="p">;</span> <span class="c1">// Se produjo un error.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="xml-es-legible-y-facil-de-editar-pero-y-si-necesito-que-el-archivo-no-sea-legible-por-cualquiera">XML es legible y facil de editar, ¿pero y si necesito que el archivo no sea legible por cualquiera?</h1>
+
+<p>No es <strong>XML</strong> todo lo que se puede hacer con serializadores. También se puede serializar en <strong>formato binario</strong> mediante <strong>BinaryFormatter</strong>. A continuación el código de la clase con las funciones para serializar en binario:</p>
+
+<h5 id="binaryserializercs">BinarySerializer.cs</h5>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Runtime.Serialization</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Runtime.Serialization.Formatters.Binary</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EjemploSerializacion</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">BinarySerializer</span>
+    <span class="p">{</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Serializa un objeto a un archivo binario.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="data"&gt;Objeto a serializar.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="filename"&gt;Archivo binario a generar.&lt;/param&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Serialize</span><span class="p">(</span><span class="kt">object</span> <span class="n">data</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">IFormatter</span> <span class="n">formatter</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BinaryFormatter</span><span class="p">();</span>
+            <span class="n">Stream</span> <span class="n">stream</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">FileStream</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">FileMode</span><span class="p">.</span><span class="n">Create</span><span class="p">,</span> <span class="n">FileAccess</span><span class="p">.</span><span class="n">Write</span><span class="p">,</span> <span class="n">FileShare</span><span class="p">.</span><span class="n">None</span><span class="p">);</span>
+            <span class="n">formatter</span><span class="p">.</span><span class="nf">Serialize</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+            <span class="n">stream</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Deserializa un archivo binario a objeto.</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;typeparam name="T"&gt;Tipo del objeto a deserializar.&lt;/typeparam&gt;</span>
+        <span class="c1">/// &lt;param name="filename"&gt;Archivo binario a deserializar.&lt;/param&gt;</span>
+        <span class="c1">/// &lt;returns&gt;Devuelve la instancia de la clase serializada.&lt;/returns&gt;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">Deserialize</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">IFormatter</span> <span class="n">formatter</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BinaryFormatter</span><span class="p">();</span>
+            <span class="n">Stream</span> <span class="n">stream</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">FileStream</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">FileMode</span><span class="p">.</span><span class="n">Open</span><span class="p">,</span> <span class="n">FileAccess</span><span class="p">.</span><span class="n">Read</span><span class="p">,</span> <span class="n">FileShare</span><span class="p">.</span><span class="n">Read</span><span class="p">);</span>
+            <span class="n">T</span> <span class="n">ret</span> <span class="p">=</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="n">formatter</span><span class="p">.</span><span class="nf">Deserialize</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+            <span class="n">stream</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Un detalle muy importante. Para que el serializador binario funcione correctamente, cada clase que queramos serializar habremos de añadirle la clausula <strong>[Serializable]</strong>, de lo contrario el serializador nos devolverá una excepción por que la clase no esta indicada como que es serializable. Esto no sucede con los serializadores XML.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">Serializable</span><span class="p">]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MiClase</span>
+<span class="p">{</span>
+</code></pre></div></div>
+
+<p><del>El serializador binario lo veo útil en <strong>Windows</strong>, donde cualquiera podría husmear en nuestros archivos que generamos, pero no lo usaría en <strong>XBox360</strong> ni en <strong>Windows Phone</strong>, ya que allí no esta al alcance de cualquiera salvo de nuestra aplicación y con la serialización XML nos bastaría.</del></p>
+
+<p><strong>Edito:</strong> me aclara un compañero, <a href="http://blog.r2d2rigo.es/">Rodrigo Díaz</a>, que los serializadores binarios no están disponibles en XBox360 ni Windows Phone.</p>
+
+<p>Espero que el articulo haya sido de utilidad.</p>
+
+<p>Salu2…</p>
+
+<p>Enlaces de referencia:<br />
+<a href="http://msdn.microsoft.com/es-es/library/ms233836(v=vs.80).aspx">MSDN: Fundamentos de la serialización de .NET Framework<br />
+</a><a href="http://msdn.microsoft.com/en-us/library/bb200105.aspx">MSDN: What Is Storage? (XNA)</a><br />
+<a href="http://blogs.msdn.com/b/shawnhar/archive/2008/08/12/teaching-a-man-to-fish.aspx">Articulo de Shawn Hargreaves sobre el IntermediateSerializer de XNA</a><br />
+<a href="http://msdn.microsoft.com/es-ES/library/ff604992(v=xnagamestudio.40).aspx">MSDN: Escritura de datos (Windows Phone)</a></p>
+</div>
+
+        
+
+        <div class="pt-5">
+          
+          <span>Categories</span>
+          <div class="categories">
+            <div class="d-flex flex-wrap">
+              
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/development">
+    Development
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/tooling">
+    Tooling
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/net">
+    .NET
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/xna">
+    XNA
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/archive">
+    Archive
+  </a>
+  
+</div>
+
+
+            </div>
+          </div>
+          
+
+          
+          
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/blog/dotnet-serialization-for-gamedata';
+    this.page.identifier = 'http://localhost:4000/blog/dotnet-serialization-for-gamedata';
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

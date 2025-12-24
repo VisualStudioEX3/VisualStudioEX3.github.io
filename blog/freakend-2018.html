@@ -1,0 +1,4138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Resumen del Freakend 2018 - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-post has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+
+        
+
+
+
+
+
+
+
+
+
+<div class="heading">
+  
+
+  
+  <div class="heading-heading">
+    <h1>Resumen del Freakend 2018</h1>
+  </div>
+  
+
+  
+  <div class="heading-description">
+    <p>80 frikis amantes de los videojuegos, la mayoría de ellos desarrolladores a varios niveles, tanto profesionales como amateurs, muchos locos de lo retro a nivel de juegos y ordenadores, encerrados durante todo un fin de semana en un apacible hotel de la sierra madrileña, compartiendo experiencias, anécdotas y conocimiento. En pocas palabras, esto es el Freakend! (el de videojuegos, no el de mobile :P)</p>
+  </div>
+  
+
+  
+  <div class="heading-image">
+    <img  alt="Resumen del Freakend 2018"  src="/assets/images/gen/posts/2018-02-20-freakend-2018/thumbnail.webp" />
+  </div>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        
+
+        <div class="pb-3">
+          <span>Published on 20 February 2018</span>
+        </div>
+
+        
+          
+
+
+<div class="alert alert-default d-flex align-items-center" role="alert">
+    <i class="bi bi-translate me-2"></i>
+    <div>This post is preserved from the old <b>visualstudioex3.com</b> Wordpress site and his content is presented in the original format and unstranslated from spanish.</div>
+</div>
+        
+
+        <div class="content pb-2"><p>Un año más. como no podía ser menos, se volvió a celebrar el <strong>Freakend</strong>, mi 5º año asistiendo consecutivamente a este evento y el 7º año ya que se celebra sin falta. Un evento que año tras año ha ido evolucionando y creciendo poco a poco, pasando de ser un pequeño evento privado de colegas en una casa rural a un evento divido en dos variantes, <strong>videojuegos</strong> y <strong>mobile</strong>, ambos enfocados a desarrollo en todas sus áreas (no solo programación) y que cada uno reúne a día de hoy a más de 80 personas, algunas viniendo inclusive desde sitios tan lejanos como Finlandia. Mi resumen, como siempre, sera sobre la edición de videojuegos.</p>
+
+<p>Para el que a estas alturas no sepa de que estoy hablando. El <strong>Freakend</strong> era un evento que nació como una escapada de colegas, gente del mundo del desarrollo de software y gente relacionada con el desarrollo de juegos, que se juntaban en una casa rural durante un fin de semana para compartir conocimientos mediante pequeñas charlas voluntarias, ademas de pasar un fin de semana entre amigos. A partir del 3º año el evento comenzó a crecer, aceptando a más gente a través del circulo de amigos cercano del grupo inicial. Se paso de 15 o 20 personas a 30 y 50 entre el 3º y 4º año. A partir de entonces se llego a dejar entradas abiertas al publico que conocía el evento por el boca a boca y que deseaba asistir.</p>
+
+<p>A día de hoy, el evento, tal y como mencionaba antes, se ha llegado a doblar en dos ramas, videojuegos y desarrollo mobile, juntando cada una de ellas hasta 80 personas en la actualidad en un hotel. Viene gente de varios rincones de España (y de fuera), en el caso del Freakend de videojuegos, gente de grandes estudios nacionales <em>(Tequila Works, Digital Legends, Future Lighthouse)</em>, impartiendo charlas y presentaciones de mucho nivel y diversas áreas como diseño o producción ademas de programación.</p>
+
+<p>En este blog tenéis los resúmenes a todo detalle de los últimos 4 años que podéis encontrar a través del tag <a href="https://visualstudioex3.com/blog/tag/freakend/">#Freakend</a></p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_DukeNukem_Meme.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_DukeNukem_Meme.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+      <p>Duke Nukem, nada más llegar al Freakend.</p>
+    
+  </figcaption>
+</figure>
+
+<p>Este año repetimos de nuevo en el hotel <a href="https://hotel-lasgacelas.com/">Las Gacelas</a>, en <a href="https://goo.gl/maps/s1ZJSR46RMH2">Becerril de la Sierra, Madrid</a>. El año pasado la experiencia fue genial como lugar para hacer las charlas así como por el resto de contenido del evento y sin olvidar la calidad del alojamiento y la comida. El evento comenzó como años anteriores, en la cafetería del hotel llenándose con la gente que iba llegando durante toda la tarde. Ahí empezó el networking del evento, volviendo a ver caras de viejos amigos de toda la vida y de gente que casualmente solo coincidimos en este evento bien sea por la distancia que nos separa o bien por motivos de trabajo y falta de tiempo. Nada que una buena cerveza no solucione :)</p>
+
+<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+<div class="w3schools">
+    <div class="slideshow-gallery" id="025505200" data-slide-index="1">
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="slides-container">
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 025505200-slides" style="display: block;">
+                        <div class="numbertext">1 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_01.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_01.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 025505200-slides" style="display: none;">
+                        <div class="numbertext">2 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_02.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_02.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 025505200-slides" style="display: none;">
+                        <div class="numbertext">3 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_03.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_03.webp" />
+                    </div>
+                
+                    <!-- Full-width images with number text -->
+                    
+                    <div class="mySlides 025505200-slides" style="display: none;">
+                        <div class="numbertext">4 / 4</div>
+                        
+                        <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_04.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_04.webp" />
+                    </div>
+                
+
+                <!-- Next and previous buttons -->
+                
+                <a class="prev" onclick="plusSlides(-1, 025505200)">&#10094;</a>
+                
+                <a class="next" onclick="plusSlides(1, 025505200)">&#10095;</a>
+            </div>
+
+            <!-- Image text -->
+            
+            
+            <div class="caption-container" style="display: none;">
+                <p id="025505200-caption"></p>
+            </div>
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 025505200-demo active" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_01.webp" alt="" onclick="currentSlide(1, 025505200)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 025505200-demo" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_02.webp" alt="" onclick="currentSlide(2, 025505200)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 025505200-demo" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_03.webp" alt="" onclick="currentSlide(3, 025505200)" />
+                    </div>
+                
+                    <div class="column">
+                        
+                        
+                        
+                        <img class="demo cursor 025505200-demo" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_04.webp" alt="" onclick="currentSlide(4, 025505200)" />
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/w3schools/slideshow-gallery.js"></script>
+
+<p>El nivel frikismo de este año se mantuvo a niveles astronómicos, como no podía ser menos. Este año de nuevo nos sorprendieron con charlas tales como la de desarrollar un emulador de la NES, cortesía de <strong>Kike Alcor</strong> (<a href="https://twitter.com/SuperKeeks">@<strong>SuperKeeks</strong></a>), la segunda parte de la charla del año pasado de <strong>Carlos Hernandez Gomez</strong> (<a href="https://twitter.com/k4rliky">@<strong>k4rliky</strong></a>, con su interminable nick en Twitter ;P) sobre hacking de juegos online con ingeniería inversa o la charla de como diseñar un sistema de combate en videojuegos, primera charla que da <strong>Cristina Ramos</strong> (<a href="https://twitter.com/SaffronCR">@<strong>SaffronCR</strong></a>), toda una veterana en esto de desarrollar juegos aquí en España :)</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">The slides for my <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> talk about how I made a NES emulator are now available here: <a href="https://t.co/9AyZaSd9ks">https://t.co/9AyZaSd9ks</a></p>&mdash; Kike Alcor (@SuperKeeks) <a href="https://twitter.com/SuperKeeks/status/962754287150518272?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Muchas gracias a todos los que ayer disfrutasteis del “Lugares fantásticos y cómo encontrarlos”. 🏌🏻‍♂️ Siempre es un placer venir a <a href="https://twitter.com/FreakendConf?ref_src=twsrc%5Etfw">@FreakendConf</a> a hablar de estas cosas 🤗♥️ <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/YsIWnsgr1p">pic.twitter.com/YsIWnsgr1p</a></p>&mdash; Imagineer de andar por casa (@k4rliky) <a href="https://twitter.com/k4rliky/status/962239441153687552?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Aquí tenéis las diapositivas de la charla &quot;Hostias como panes&quot; que di en el <a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a>, es bastante útil como chuleta para recordar a la hora de ponerte con un sistema de combate:<a href="https://t.co/dBcqy1uGzt">https://t.co/dBcqy1uGzt</a></p>&mdash; estoy en bluesky (@SaffronCR) <a href="https://twitter.com/SaffronCR/status/962979960129556480?ref_src=twsrc%5Etfw">February 12, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_IsOver9000_Meme.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_IsOver9000_Meme.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<p>Otras charlas del  como la de la producción del videojuego de realidad virtual de <a href="http://www.tequilaworks.com">Tequila Works</a>, <strong><a href="http://www.tequilaworks.com/proyectos/the-invisible-hours/">Invisible Hours</a></strong>, impartida por <strong>Jose Raluy</strong> (<a href="https://twitter.com/Jose_Raluy">@<strong>Jose_Raluy</strong></a>) o charlas curiosas (otra de nivel 9000 por lo menos xD) como la de <strong>Luis Díaz Peralta</strong> (<strong><a href="https://twitter.com/Ludipe/">@Ludipe</a></strong>) sobre juegos rarunos.</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I gave a talk about weird games at <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a>. It&#39;s the first time my slides make any sense on their own and people asked for them, so I uploaded them (it&#39;s just a list of cool games you might not know though)<a href="https://t.co/7uKVOzgKHJ">https://t.co/7uKVOzgKHJ</a></p>&mdash; Ludipe (@Ludipe) <a href="https://twitter.com/Ludipe/status/963111331011416067?ref_src=twsrc%5Etfw">February 12, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">El gran <a href="https://twitter.com/Jose_Raluy?ref_src=twsrc%5Etfw">@Jose_Raluy</a> nos va a contar por qué  por qué la producción es arte a través de una mirada detrás de <a href="https://twitter.com/HoursInvisible?ref_src=twsrc%5Etfw">@HoursInvisible</a> en el <a href="https://twitter.com/FreakendConf?ref_src=twsrc%5Etfw">@FreakendConf</a> <a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a> <a href="https://t.co/TNdAhFb0IO">pic.twitter.com/TNdAhFb0IO</a></p>&mdash; 🐲Raúl Rubio Munárriz (@don_raul) <a href="https://twitter.com/don_raul/status/962635455966728192?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Una de las novedades interesantes de este año ha sido la implementación de un espacio de charlas abierto, en paralelo al circuito de charlas “oficial”. La gracia de esta novedad es que este espacio de charlas, el contenido lo deciden los asistentes. Al principio se propone una ronda de sugerencias, donde la gente sale a proponer uno o varios temas, que luego se someten a votación, mediante dos votos por asistente. Esto dio pie a varias charlas interesantes, aunque si debo destacar una, es la que <strong>Roberto Romero Pérez</strong> (<a href="https://twitter.com/Robertogeek">@<strong>Robertogeek</strong></a>) nos dio sobre su estudio de realidad virtual, <a href="http://futurelighthouse.com/">Future Lighthouse</a>, y todo lo que ha sido su aventura empresarial hasta estos días. Una charla muy cercana y muy inspiradora, con muchos detalles para recordar. El tipo de charlas que me gustaría ver más a menudo en eventos como este:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Listening to <a href="https://twitter.com/Robertogeek?ref_src=twsrc%5Etfw">@Robertogeek</a> talk at <a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a> about his experience leading a VR studio has been amazing. Super touching and helpful. <a href="https://t.co/YrsakauQcj">pic.twitter.com/YrsakauQcj</a></p>&mdash; Ludipe (@Ludipe) <a href="https://twitter.com/Ludipe/status/962385743489454080?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Muy reveladora y transparente la charla de <a href="https://twitter.com/Robertogeek?ref_src=twsrc%5Etfw">@Robertogeek</a> sobre como cerrar una empresa de forma ordenada <a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a> <a href="https://t.co/GKq4pqRzfZ">pic.twitter.com/GKq4pqRzfZ</a></p>&mdash; Alberto Gonzalez (@gamebaker) <a href="https://twitter.com/gamebaker/status/962389431339634688?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Y el Freakend no seria lo que es sin todo lo demás, anécdotas, networking, reencontrarse con viejos amigos, conocer nuevos… y todo lo que puede ocurrir alrededor de ello, al amparo de unas buenas cervezas o lo que te pida el cuerpo. Me estoy refiriendo, claro esta, al área donde la gente muestra proyectos propios, donde montarse una buena partida del juego de mesa de turno, partidas a 4 jugadores locales a juegos locos o viejos clásicos, o armarte una tripulación para lanzarte al espacio a defender tus bases de los enemigos del otro lado de la galaxia cual película de Star Trek.</p>
+
+<p><strong>Carlos Milan</strong> (<a href="https://twitter.com/cmilanf">@<strong>cmilanf</strong></a>), fiel a su espíritu, nos deleita un año más con su <strong>MSX</strong> y su <strong>Amiga 600</strong> hypervitaminado. A parte de sesiones de programación en <strong>MSX-Basic</strong>, donde alguno puso a prueba su memoria programando con este interprete, pudimos probar en vivo y en directo la versión para MSX, en cartucho físico, de <a href="https://www.vidaextra.com/juegos-retro/tendremos-racion-doble-de-msx-con-mini-ghost-dentro-de-muy-poco"><strong>Mini-Ghost</strong></a>, la versión retro de <a href="http://store.steampowered.com/app/463270/Ghost_10/?l=spanish"><strong>Ghost 1.0</strong></a> del creador de <strong>Unepic, Francisco Téllez de Meneses</strong> (<a href="https://twitter.com/unepic_fran">@<strong>unepic_fran</strong></a>):</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Que recuerdos con el basic!! Fue mi primer contacto con la programación a los 8 años. Aquí el miniprograma que he improvisado en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/q3HC6JuX9q">pic.twitter.com/q3HC6JuX9q</a></p>&mdash; AlejoLab 🌱🌿 (@alejocamaleon) <a href="https://twitter.com/alejocamaleon/status/962427382450835456?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><p>There was a 'Not Found' error fetching URL: 'https://twitter.com/Vii1/status/962310254494175232'</p></div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="ht" dir="ltr">Ghost de MSX presente en el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a>! <a href="https://twitter.com/unepic_fran?ref_src=twsrc%5Etfw">@unepic_fran</a> <a href="https://t.co/yIQt3wrlWm">pic.twitter.com/yIQt3wrlWm</a></p>&mdash; David Jaumandreu (@DavidJaumandreu) <a href="https://twitter.com/DavidJaumandreu/status/962341491661332481?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>El puente de mando del <strong>USS</strong> <strong>Artemis</strong> :P (<a href="http://store.steampowered.com/app/247350/Artemis_Spaceship_Bridge_Simulator/">Artemis Bridge Simulator</a>), cortesía de <strong>Roberto Romero Pérez</strong> (<a href="https://twitter.com/Robertogeek">@<strong>Robertogeek</strong></a>), que nos hizo de capitán en el puente de mando a 6 inexpertos cadetes. La verdad que nunca había probado un juego de este estilo y debo decir que del rato que estuve jugando me lo pase de fabula como timonel y artillero a ratos, como buen friki de Star Trek que me considero, es un juego seguro volveré a jugar en un futuro y que recomiendo :D</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Jugando al artemis hasta ahora mismo. Ya no puedo más xD <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/2iNJEWswac">https://t.co/2iNJEWswac</a></p>&mdash; Robbie The Geek ᯅ (@Robertogeek) <a href="https://twitter.com/Robertogeek/status/962553833913225217?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Artemis 6 player coop at <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a>! <a href="https://t.co/hrmlvgVBeu">pic.twitter.com/hrmlvgVBeu</a></p>&mdash; David Jaumandreu (@DavidJaumandreu) <a href="https://twitter.com/DavidJaumandreu/status/962504800897290240?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Como comentaba antes, también hubo espacio para que un par de proyectos se enseñaran en su fases de desarrollo de cara a recibir feedback de los asistentes. Ambos proyectos, uno diseñado por <strong>Manu Saiz</strong> (<a href="https://twitter.com/manuScythe">@<strong>manuScythe</strong></a>), <a href="https://forums.tigsource.com/index.php?topic=56837.0">Duelcide</a>, un juego estilo Dark Souls en 2.5D, y <strong>Superepic</strong> de <a href="http://www.undercoders.com">Undercoders</a>, creadores del premiado <a href="https://www.hobbyconsolas.com/noticias/juego-espanol-conga-master-galardonado-tokyo-game-show-166358">Conga Master</a>:</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_67.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_67.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">First Superepic playtesting sessions at <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://t.co/Eu2YnXpIZw">pic.twitter.com/Eu2YnXpIZw</a></p>&mdash; David Jaumandreu (@DavidJaumandreu) <a href="https://twitter.com/DavidJaumandreu/status/962384057291206656?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<p>Otra de las novedades, una de las más divertidas de este año, ha sido el Karaoke de Power Points. Y ahora estarás pensando… ¿!pero que cojones es un karaoke de Power Points!? xD Básicamente es un juego en el que un voluntario sale al escenario para realizar una breve charla sobre un tema sin saber cual y usando una presentación de varias diapositivas al azar, cada cual más bizarra e inconexa con la anterior y cuyo tema solo se muestra en el titulo de la primera. Aquí se monto la fiesta durante un buen rato, deleitándonos con grandes actuaciones como las de <strong>Carlos Milan</strong> (<a href="https://twitter.com/cmilanf">@<strong>cmilanf</strong></a>), quien uno de los asistentes inmortalizo sus dos soberbias improvisaciones xD</p>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/bDuGqefwS2U" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/l5hqDzH0cAs" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<p>Y como buen Freakend que se precie contando con la presencia de <strong>Alejo Acevedo Civantos</strong> (<a href="https://twitter.com/alejocamaleon">@<strong>alejocamaleon</strong></a>) no podía faltar el ya tradicional <strong>Juego de la Servilleta</strong>. Este milenario juego, que se lleva haciendo desde, que yo recuerde, la KDD Stratos-AD en 2006, consiste, o pretende más bien xD, ser un “ejercicio” de diseño… que intencionadamente se convierte en un despropósito de principio a final xD El juego consiste en continuar un texto que recibe el jugador, del que solo puede leer la ultima linea escrita, y en el que debe escribir dos lineas más de texto, tratando de continuar el contexto o alterarlo a placer… como todos acabamos haciendo :P Dicho juego se va realizando durante todo el fin de semana del Freakend, dando tiempo para que todos los asistentes puedan participar en esta “honorable tradición”. El ultimo día, al final de la comida, se procede a su lectura para deleite de todos los allí presentes.</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+    <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_94.webp" target="_blank">
+  
+
+  <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_94.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_94.webp" />
+
+  
+    </a>
+  
+
+  <figcaption>
+    
+
+    
+      <p>Pulsa en la imagen para verla a resolucion completa.</p>
+    
+  </figcaption>
+</figure>
+
+<div class="content-video 
+content-video-16-9">
+  <iframe class="content-video-iframe" src="https://www.youtube.com/embed/ByQCQJEi538" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<p>Y asi, un año más, el Freakend deja su huella en todos los asistentes. Muchos veteranos que llevamos casi desde los inicios asistiendo, muchas caras nuevas que disfrutan a tal punto con lo que allí descubren que deciden repetir al siguiente año.  Muchos encuentros de viejas y grandes amistades, viejas anécdotas sobre legendarios desarrollos de juegos de nuestra industria, conocer en persona a gente con la que te has cruzado durante años en foros como los de Stratos-AD, experiencias de la gente que te llenan y motivan, y un sin fin más de sentimientos y momentos como para describir en un simple párrafo o tratar de ilustrar con fotografías o momentos de Twitter compartidos por cada uno de los asistentes. Otro año más que podemos decir que hemos estado allí juntos, pasando un fin de semana inolvidable entre risas y sueño (algunos), un fin de semana entre amigos, compartiendo todo aquello que nos une, que va mucho más allá del desarrollo de videojuegos o de jugarlos. Un año más, mil gracias por hacerlo posible, <strong>Jorge Barroso</strong> (<a href="https://twitter.com/flipper83">@<strong>flipper83</strong></a>) :)</p>
+
+<figure>
+  
+  
+  
+  
+
+  
+
+  <img src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_GordonFreeman_Meme.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_GordonFreeman_Meme.webp" />
+
+  
+
+  <figcaption>
+    
+
+    
+  </figcaption>
+</figure>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">So cool, <a href="https://twitter.com/hashtag/HTC?src=hash&amp;ref_src=twsrc%5Etfw">#HTC</a> haptic control at <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/RulZjTjfkb">pic.twitter.com/RulZjTjfkb</a></p>&mdash; JavierCantonFerrero (@jcant0n) <a href="https://twitter.com/jcant0n/status/962373465297780736?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Infinite hugs to <a href="https://twitter.com/flipper83?ref_src=twsrc%5Etfw">@flipper83</a> to let me once more meet all my friends and fellow developers at <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> It&#39;s an awesome energy refill</p>&mdash; Rafael Muñoz (@cookingsource) <a href="https://twitter.com/cookingsource/status/962754489445965830?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Acabo de pasar a limpio 19 páginas llenas de feedback súper interesante y algún que otro bug, de la versión de Superepic que llevé al <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a>. Mil gracias a todos los que la probasteis! <a href="https://t.co/PxeblQR2oy">pic.twitter.com/PxeblQR2oy</a></p>&mdash; David Jaumandreu (@DavidJaumandreu) <a href="https://twitter.com/DavidJaumandreu/status/963455427169128449?ref_src=twsrc%5Etfw">February 13, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">gracias a <a href="https://twitter.com/flipper83?ref_src=twsrc%5Etfw">@flipper83</a> por currárselo tanto!! el año que viene repito fijo <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a></p>&mdash; Sergio (@sergiodeprado) <a href="https://twitter.com/sergiodeprado/status/962976821645103104?ref_src=twsrc%5Etfw">February 12, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Impresionado por el <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a>. Qué nivel. Aprovechando cada minuto para aprender lo máximo posible</p>&mdash; Andrés Pérez (@AndresPerezGil) <a href="https://twitter.com/AndresPerezGil/status/962387230127017986?ref_src=twsrc%5Etfw">February 10, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Probando juegos, charlas, retro y mucho más en <a href="https://twitter.com/hashtag/FreakEnd?src=hash&amp;ref_src=twsrc%5Etfw">#FreakEnd</a> <a href="https://t.co/Za5YLZjnsB">pic.twitter.com/Za5YLZjnsB</a></p>&mdash; estoy en bluesky (@SaffronCR) <a href="https://twitter.com/SaffronCR/status/962483647273164800?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Aquí <a href="https://twitter.com/cmilanf?ref_src=twsrc%5Etfw">@cmilanf</a> programando el juego de la servilleta en un <a href="https://twitter.com/hashtag/MSX?src=hash&amp;ref_src=twsrc%5Etfw">#MSX</a> en Basic <a href="https://twitter.com/hashtag/Freakend?src=hash&amp;ref_src=twsrc%5Etfw">#Freakend</a> <a href="https://t.co/Z9DuizdLFx">pic.twitter.com/Z9DuizdLFx</a></p>&mdash; Alberto Gonzalez (@gamebaker) <a href="https://twitter.com/gamebaker/status/962480346011963397?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Ya de vuelta en casa después de pasar un fin de semana increible con la peña en <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://twitter.com/hashtag/freakendgames?src=hash&amp;ref_src=twsrc%5Etfw">#freakendgames</a> . Muchas gracias a <a href="https://twitter.com/flipper83?ref_src=twsrc%5Etfw">@flipper83</a> por la currada de organizar todos los años algo así</p>&mdash; Lucas González (@LucasGZP) <a href="https://twitter.com/LucasGZP/status/962778943119118336?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><p>There was a 'Not Found' error fetching URL: 'https://twitter.com/Vii1/status/962466238822838272'</p></div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Servilleta Game Experience <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/WIonmhZfwj">pic.twitter.com/WIonmhZfwj</a></p>&mdash; Daniel Matas (@Eldan_Knight) <a href="https://twitter.com/Eldan_Knight/status/962778346189926400?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">El <a href="https://twitter.com/FreakendConf?ref_src=twsrc%5Etfw">@FreakendConf</a> siempre es MUY corto. Ha sido un finde apasionante rodeado de la mejor gente posible. GRACIAS a <a href="https://twitter.com/flipper83?ref_src=twsrc%5Etfw">@flipper83</a> por hacer posible este evento, siempre tiene que haber un motor y tenemos el rollsroyce de los organizadores. <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a> <a href="https://t.co/m4YGxniFjz">pic.twitter.com/m4YGxniFjz</a></p>&mdash; Robbie The Geek ᯅ (@Robertogeek) <a href="https://twitter.com/Robertogeek/status/962738044662054912?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<div class="jekyll-twitter-plugin"><p>There was a 'Not Found' error fetching URL: 'https://twitter.com/Jorg\_Mer/status/963502990689816578'</p></div>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Awesome <a href="https://twitter.com/hashtag/freakend?src=hash&amp;ref_src=twsrc%5Etfw">#freakend</a>! It&#39;s like my dream place to share fun and knowledge. I hope to see you all  next year! (specially the <a href="https://twitter.com/hashtag/VR?src=hash&amp;ref_src=twsrc%5Etfw">#VR</a> table)</p>&mdash; Nestor Vina (@nesvi7) <a href="https://twitter.com/nesvi7/status/962832440732594176?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+</div>
+
+        
+        <div class="pt-5">
+          <div class="row">
+    <div class="page-image">
+        <div class="gallery gallery-masonry">
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_01.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_01.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_01.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_02.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_02.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_02.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_03.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_03.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_03.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_04.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_04.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_04.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_05.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_05.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_05.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_06.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_06.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_06.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_07.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_07.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_07.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_08.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_08.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_08.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_09.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_09.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_09.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_10.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_10.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_10.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_11.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_11.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_11.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_12.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_12.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_12.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_13.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_13.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_13.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_14.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_14.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_14.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_15.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_15.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_15.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_16.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_16.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_16.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_17.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_17.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_17.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_18.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_18.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_18.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_19.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_19.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_19.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_20.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_20.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_20.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_21.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_21.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_21.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_22.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_22.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_22.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_23.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_23.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_23.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_24.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_24.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_24.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_25.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_25.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_25.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_26.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_26.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_26.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_27.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_27.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_27.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_28.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_28.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_28.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_29.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_29.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_29.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_30.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_30.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_30.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_31.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_31.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_31.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_32.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_32.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_32.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_33.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_33.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_33.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_34.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_34.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_34.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_35.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_35.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_35.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_36.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_36.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_36.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_37.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_37.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_37.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_38.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_38.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_38.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_39.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_39.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_39.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_40.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_40.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_40.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_41.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_41.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_41.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_42.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_42.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_42.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_43.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_43.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_43.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_44.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_44.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_44.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_45.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_45.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_45.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_46.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_46.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_46.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_47.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_47.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_47.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_48.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_48.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_48.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_49.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_49.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_49.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_50.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_50.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_50.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_51.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_51.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_51.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_52.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_52.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_52.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_53.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_53.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_53.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_54.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_54.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_54.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_55.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_55.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_55.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_56.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_56.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_56.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_57.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_57.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_57.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_58.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_58.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_58.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_59.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_59.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_59.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_60.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_60.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_60.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_61.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_61.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_61.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_62.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_62.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_62.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_63.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_63.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_63.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_64.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_64.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_64.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_65.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_65.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_65.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_66.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_66.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_66.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_67.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_67.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_67.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_68.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_68.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_68.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_69.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_69.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_69.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_70.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_70.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_70.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_71.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_71.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_71.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_72.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_72.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_72.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_73.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_73.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_73.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_74.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_74.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_74.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_75.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_75.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_75.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_76.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_76.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_76.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_77.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_77.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_77.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_78.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_78.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_78.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_79.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_79.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_79.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_80.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_80.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_80.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_81.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_81.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_81.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_82.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_82.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_82.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_83.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_83.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_83.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_84.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_84.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_84.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_85.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_85.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_85.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_86.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_86.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_86.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_87.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_87.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_87.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_88.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_88.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_88.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_89.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_89.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_89.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_90.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_90.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_90.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_91.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_91.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_91.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_92.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_92.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_92.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_93.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_93.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_93.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_94.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_94.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_94.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_95.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_95.webp" alt="/assets/images/gen/posts/2018-02-20-freakend-2018/Freakend2018_95.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    var grid = document.querySelector('.gallery');
+    var msnry;
+
+    imagesLoaded(grid, function () {
+        msnry = new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            percentPosition: true,
+            horizontalOrder: true
+        });
+    });
+</script>
+        </div>
+        
+
+        <div class="pt-5">
+          
+          <span>Categories</span>
+          <div class="categories">
+            <div class="d-flex flex-wrap">
+              
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/events">
+    Events
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/freakend">
+    Freakend
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/archive">
+    Archive
+  </a>
+  
+</div>
+
+
+            </div>
+          </div>
+          
+
+          
+          
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/blog/freakend-2018';
+    this.page.identifier = 'http://localhost:4000/blog/freakend-2018';
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Como instalar XNA 4.0 en Visual Studio 2013 sin instalar Visual Studio 2010 o Windows Phone SDK 7.1 - Visual Studio EX3</title>
+
+<meta name="description" content="José Miguel Sánchez Fernández's personal web site and game projects portfolio." />
+
+
+
+
+
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon/favicon.png">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-mode', 'dark');
+  </script>
+  
+
+</head>
+
+<body
+  class="page page-post has-fixed-header">
+
+  <div class="menu-main-mobile "
+  id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+    <ul class="menu">
+      
+      
+      <li class="menu-item-home">
+        <a href="/">Home</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-projects">
+        <a href="/projects/">Projects</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-blog">
+        <a href="/blog/">Blog</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-categories">
+        <a href="/categories/">Categories</a>
+      </li>
+      
+      
+      
+      <li class="menu-item-travel map">
+        <a href="/travel-map/">Travel Map</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+    
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    
+    
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+    
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+  </div>
+
+</div>
+  
+
+<div id="header" class='header 
+header-fixed 
+'>
+  <div class="container">
+    <div class="logos">
+  <div class="logo logo-desktop">
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-desktop-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+  <div class="logo logo-mobile">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+
+    
+    <div class="logo-image">
+      <a href="/">
+        <img height="48px" width="48px"
+          alt="Visual Studio EX3 Logo" src="/assets/images/logo/tlsa_deckard_runner.gif" />
+      </a>
+    </div>
+    
+
+    
+    <div class="logo-text"><a href="/">Visual Studio EX3</a></div>
+    
+
+  </div>
+
+</div>
+    <div class="menu-main">
+  <ul>
+    
+    
+    
+    <li class="">
+      <a href="/">Home</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Projects">
+      <a href="/projects/">Projects <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu ">
+        
+        
+        <a href="/category/games/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="fa-solid fa-gamepad"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Games</div>
+            <div class="dropdown-item-description">All game projects</div>
+          </div>
+        </a>
+        
+        <a href="/category/custom-tools/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-tools"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Custom Tech</div>
+            <div class="dropdown-item-description">Custom tools, frameworks, engines...</div>
+          </div>
+        </a>
+        
+        <a href="/category/professional/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-briefcase-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Professional Portfolio</div>
+            <div class="dropdown-item-description">Projects where I worked as professional</div>
+          </div>
+        </a>
+        
+        <a href="/category/game-jams/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Game Jams</div>
+            <div class="dropdown-item-description">Projects developed on Game Jams</div>
+          </div>
+        </a>
+        
+        <a href="/category/prototypes/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-flask-fill"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">Prototypes</div>
+            <div class="dropdown-item-description">Small projects and experiments</div>
+          </div>
+        </a>
+        
+        <a href="/projects/"
+          class="dropdown-item ">
+
+          
+          <div class="dropdown-item-icon"><i class="bi bi-asterisk"></i></div>
+          
+
+          <div class="dropdown-item-content">
+            <div class="dropdown-item-name">All Projects</div>
+            <div class="dropdown-item-description">All projects since 1999</div>
+          </div>
+        </a>
+        
+        
+      </div>
+
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/blog/">Blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    
+    
+    
+    <li class="">
+      <a href="/travel-map/">Travel Map</a>
+    </li>
+    
+    
+    
+    <li class="menu-item-dropdown menu-item-Contact">
+      <a href="https://www.linkedin.com/in/ex3tlsa/">Contact <i class="fa-solid fa-chevron-down"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-from-right">
+        
+        
+<a href="https://www.linkedin.com/in/ex3tlsa/" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-linkedin"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">LinkedIn</div>
+    <div class="dropdown-item-description">Professional profile.</div>
+  </div>
+</a>
+
+<a href="https://github.com/VisualStudioEX3" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">GitHub</div>
+    <div class="dropdown-item-description">Personal projects.</div>
+  </div>
+</a>
+
+<a href="https://www.flickr.com/photos/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-flickr"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Flickr</div>
+    <div class="dropdown-item-description">Personal main photography profile.</div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/ex3_tlsa" class="dropdown-item" target="_blank">
+  
+  <div class="dropdown-item-icon-social">
+    <i class="fab fa-instagram-square"></i>
+  </div>
+  
+  <div class="dropdown-item-content">
+    <div class="dropdown-item-name">Instagram</div>
+    <div class="dropdown-item-description">Photography, travel, landscapes... and cats!</div>
+  </div>
+</a>
+
+        
+      </div>
+
+    </li>
+    
+    
+  </ul>
+</div>
+    
+    <div class="dark-mode-switcher " id="dark-mode-container">
+  <div class="dark-mode-switch">
+    <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px"
+      x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <title>essential</title>
+      <path
+        d="M33.28,58.24A26.95,26.95,0,0,1,24,6l.39-.13a2,2,0,0,1,2.4,2.87,22.42,22.42,0,0,0-1.51,18.75h0A22.47,22.47,0,0,0,54.09,40.8l.76-.3a2,2,0,0,1,2.24.48,2,2,0,0,1,.35,2.24,27,27,0,0,1-24.16,15ZM21.11,11.85a22.94,22.94,0,1,0,30,33.91A26.46,26.46,0,0,1,21.53,28.87h0A26.4,26.4,0,0,1,21.11,11.85Z">
+      </path>
+    </svg>
+    <svg class="dark-mode-icon-light" fill="#000000" height="20px" style="enable-background: new 0 0 100 100;"
+      version="1.1" viewbox="0 0 100 100" width="20px" x="0px" xml:space="preserve"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+      <g>
+        <path
+          d="M50,75c-13.8,0-25-11.2-25-25s11.2-25,25-25s25,11.2,25,25S63.8,75,50,75z M50,33.3c-9.2,0-16.7,7.5-16.7,16.7   c0,9.2,7.5,16.7,16.7,16.7c9.2,0,16.7-7.5,16.7-16.7C66.7,40.8,59.2,33.3,50,33.3z">
+        </path>
+      </g>
+      <g>
+        <path
+          d="M50,100c-2.3,0-4.2-1.9-4.2-4.2v-8.3c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,98.1,52.3,100,50,100z    M17.5,86.7c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8   C19.6,86.3,18.6,86.7,17.5,86.7z M82.5,86.7c-1.1,0-2.1-0.4-2.9-1.2l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9s4.3-1.6,5.9,0l5.8,5.8   c1.6,1.6,1.6,4.3,0,5.9C84.6,86.3,83.6,86.7,82.5,86.7z M95.8,54.2h-8.3c-2.3,0-4.2-1.9-4.2-4.2c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C100,52.3,98.1,54.2,95.8,54.2z M12.5,54.2H4.2C1.9,54.2,0,52.3,0,50c0-2.3,1.9-4.2,4.2-4.2h8.3   c2.3,0,4.2,1.9,4.2,4.2C16.7,52.3,14.8,54.2,12.5,54.2z M76.7,27.5c-1.1,0-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.3,0-5.9l5.8-5.8   c1.6-1.6,4.3-1.6,5.9,0c1.6,1.6,1.6,4.3,0,5.9l-5.8,5.8C78.8,27.1,77.7,27.5,76.7,27.5z M23.3,27.5c-1.1,0-2.1-0.4-2.9-1.2   l-5.8-5.8c-1.6-1.6-1.6-4.3,0-5.9c1.6-1.6,4.3-1.6,5.9,0l5.8,5.8c1.6,1.6,1.6,4.3,0,5.9C25.5,27.1,24.4,27.5,23.3,27.5z M50,16.7   c-2.3,0-4.2-1.9-4.2-4.2V4.2C45.8,1.9,47.7,0,50,0c2.3,0,4.2,1.9,4.2,4.2v8.3C54.2,14.8,52.3,16.7,50,16.7z">
+        </path>
+      </g>
+    </svg>
+    <div class="ball"></div>
+  </div>
+</div>
+    
+    <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+
+        
+
+
+
+
+
+
+
+
+
+<div class="heading">
+  
+
+  
+  <div class="heading-heading">
+    <h1>Como instalar XNA 4.0 en Visual Studio 2013 sin instalar Visual Studio 2010 o Windows Phone SDK 7.1</h1>
+  </div>
+  
+
+  
+
+  
+  <div class="heading-image">
+    <img  alt="Como instalar XNA 4.0 en Visual Studio 2013 sin instalar Visual Studio 2010 o Windows Phone SDK 7.1"  src="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/thumbnail.webp" />
+  </div>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        
+
+        <div class="pb-3">
+          <span>Published on 28 October 2013</span>
+        </div>
+
+        
+          
+
+
+<div class="alert alert-default d-flex align-items-center" role="alert">
+    <i class="bi bi-translate me-2"></i>
+    <div>This post is preserved from the old <b>visualstudioex3.com</b> Wordpress site and his content is presented in the original format and unstranslated from spanish.</div>
+</div>
+        
+
+        <div class="content pb-2"><p>Llevaba un tiempo tocando <strong>MonoGame</strong> por encima para trastear y hacer pequeñas pruebas, ya que <strong>XNA</strong> me sigue pareciendo una herramienta, junto <strong>C#</strong> y <strong>.NET</strong>, muy potente a día de hoy para desarrollar, y sobre todo en juegos. El único inconveniente que le veo todavía a MonoGame es la necesidad forzosa de necesitar de XNA para poder realizar la compilación de assets, y que dicha tarea solo sea posible desde Windows, lo cual mata en parte la idea de usar MonoGame para desarrollar desde <strong>Linux</strong> o <strong>Mac</strong>, ademas de lo incomodo que es tener un proyecto a parte para tener que ir compilando los assets y pasarlos después al proyecto de MonoGame.</p>
+
+<p>Otro problema que me encontré con MonoGame en Windows fue que en <strong>Windows XP</strong>, por un lado, el driver de audio, <strong>OpenAL</strong>, no se instalaba correctamente (se soluciona haciendo la instalación manual) y que las llamadas a <strong>OpenGL</strong> fallaban (problemas con la versión de OpenGL de Windows XP creo recordar). En <strong>Windows 8.1</strong> las llamadas a OpenGL funcionaban sin problema, el proyecto renderizaba gráficos, pero el audio, sin dar error alguno, no funcionaba. Por este motivo me pareció más lógico dejarme de experimentos raros y tirar a por lo seguro sobre Windows, usar XNA, como solución nativa junto con DirectX, y así de paso matar dos pájaros de un tiro: el framework para desarrollar el código multiplataforma desde Windows (para luego portarlo a MonoGame) y la compilación de assets.</p>
+
+<p>Pero con XNA había un pequeño problema y era el de no poder instalar XNA en versiones de Visual Studio que no fueran la 2010. Actualmente trabajo en Windows 7 y Windows 8.1 desde Visual Studio 2013, y aunque existen formas para lograr que nuevas versiones de Visual Studio puedan cargar y gestionar proyectos de XNA 4.0 bien es cierto que esto obliga a instalar, si o si, o <strong>Visual Studio 2010</strong> o el <strong>Windows Phone SDK 7.1</strong>, que también incluye Visual Studio 2010. A mi sinceramente, no me apetece tener dos Visual Studios instalados, con toda su parafernalia que instala debajo, ocupando mucho espacio en el disco duro, solo para poder usar un framework como XNA, así que me puse a investigar y he logrado encontrar una manera viable de poder instalar manualmente XNA 4.0 para funcionar en Visual Studio 2013 sin tener que instalar antes Visual Studio 2010 o el Windows Phone SDK 7.1.</p>
+
+<p>Vayamos con el proceso:</p>
+
+<ol>
+  <li>Primero necesitaremos descargar el paquete de instalación de <strong>XNA 4.0 Game Studio</strong> desde el siguiente enlace: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=23714">Microsoft XNA Game Studio 4.0</a></li>
+  <li>Una vez descargado, procederemos a extraer su contenido en una carpeta ejecutando la siguiente llamada: <strong>xnags40_setup.exe /x</strong></li>
+  <li>Nos vamos a la carpeta donde hemos extraído los archivos y ejecutamos el paquete de instalación <strong>redists.msi</strong> (estos paquetes no mostraran ninguna ventana o información durante el proceso de instalación, por lo que salvo que ocurra algún error, no se mostrara mensaje o información alguna durante su ejecución)</li>
+  <li>
+    <p>Ahora nos desplazaremos a la carpeta donde se esta instalando XNA 4.0. Dado que la ruta cambia según si usas una versión de 32bits o de 64bits, pondré literalmente ambas rutas para quien lo necesite:</p>
+
+    <ul>
+      <li>
+        <p><strong>Windows 32 bits:</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\Setup\
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p><strong>Windows 64 bits:</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\Setup\
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Una vez en la carpeta, ejecutaremos los siguientes paquetes de instalación, en principio por este orden. No os preocupéis si fallara alguno de los 2 primeros. Para desarrollos de escritorio dudo que alguien vaya a necesitar los servicios de <strong>XBox Live</strong>, pero como no tengo claro si luego los proyectos darían problemas al ejecutarse en Visual Studio, por si acaso tratar de instalarlos:
+    <ul>
+      <li>XLiveRedist.msi</li>
+      <li>xnaliveproxy.msi</li>
+      <li>xnags_platform_tools.msi</li>
+      <li>xnags_shared.msi</li>
+    </ul>
+  </li>
+  <li>Dado que el paquete que falta, <strong>xnags_visualstudio.msi</strong>, no es posible instalarlo sin tener Visual Studio 2010 en la maquina, y este es el que contiene las plantillas de proyecto y de assets, así como extensiones de proyecto para Visual Studio, no preocuparse. Dicha carpeta y su contenido, la he subido comprimida en ZIP y la podéis bajar desde este enlace: <a href="/assets/downloads/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/xnags40_project_templates_asset_templates_from_vs2010.zip">xnags40_project_templates_asset_templates_from_vs2010.zip</a></li>
+  <li>
+    <p>Ahora ejecutaremos el ultimo instalador. Este sera necesario para que el <strong>Content Pipeline</strong> funcione en el proceso de compilación de los proyectos:</p>
+
+    <ul>
+      <li>
+        <p><strong>Windows 32 bits:</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\Redist\XNA FX Redist\xnafx40_redist.msi
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p><strong>Windows 64 bits</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\Redist\XNA FX Redist\xnafx40_redist.msi
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>Llegados a este punto, XNA 4.0 debería estar instalado en el sistema con todo lo necesario para funcionar a la hora de desarrollar con el bajo Visual Studio, salvo por que faltan las extensiones y plantillas de proyecto. Dichas extensiones y plantillas son las que vienen en el ZIP que habéis descargado en el punto 6 de la lista anterior. Ahora explicare los pasos para instalar dichas plantillas y configurarlo de forma que Visual Studio 2012 o 2013 puedan detectarlas y mostrarlas como plantillas de nuevos proyectos. En este punto  voy a detallar los pasos tanto para las versiones Express de Visual Studio, detalle que siempre obvian en otros artículos o webs, y los pasos para el resto de versiones, ya que varían rutas y comandos:</p>
+
+<ol>
+  <li>
+    <p>Instalado ya XNA 4.0 y lo necesario para funcionar con Visual Studio, procedemos a descomprimir el contenido del ZIP que hemos descargado en el punto 6 del proceso anterior. Ese contenido lo copiaremos en la siguiente ruta (como la carpeta de destino no existirá, tendréis que crearla) y variara según la versión de Visual Studio que tengáis instalada:</p>
+
+    <ul>
+      <li>
+        <p>Si tienes instalado <strong>Visual Studio 2012 Express</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Microsoft Visual Studio 11.0\Common7\IDE\WDExpressExtensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\WDExpressExtensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Si tienes instalado <strong>Visual Studio 2013 Express</strong> :</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\WDExpressExtensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\WDExpressExtensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Si tienes instalado <strong>Visual Studio 2012 Professional o superior</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Si tienes instalado <strong>Visual Studio 2013 Professional o superior</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\XNA Game Studio 4.0
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Una vez copiado los archivos,  abrimos con un editor de texto el archivo <strong>extension.vsixmanifest</strong>. En el veremos la siguiente estructura XML:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;SupportedProducts&gt;</span>
+    <span class="nt">&lt;VisualStudio</span> <span class="na">Version=</span><span class="s">"10.0"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Edition&gt;</span>VSTS<span class="nt">&lt;/Edition&gt;</span>
+        <span class="nt">&lt;Edition&gt;</span>VSTD<span class="nt">&lt;/Edition&gt;</span>
+        <span class="nt">&lt;Edition&gt;</span>Pro<span class="nt">&lt;/Edition&gt;</span>
+        <span class="nt">&lt;Edition&gt;</span>VCSExpress<span class="nt">&lt;/Edition&gt;</span>
+        <span class="nt">&lt;Edition&gt;</span>VPDExpress<span class="nt">&lt;/Edition&gt;</span>
+    <span class="nt">&lt;/VisualStudio&gt;</span>
+<span class="nt">&lt;/SupportedProducts&gt;</span>
+</code></pre></div>    </div>
+
+    <p>Donde pone <strong>Version</strong>, cambiaremos el valor a nuestra versión de Visual Studio instalada, <strong>11.0</strong> para <strong>Visual Studio 2012</strong> (independientemente de si es Express o no), y <strong>12.0</strong> para <strong>Visual Studio 2013</strong>.</p>
+  </li>
+  <li>
+    <p>En el caso de tratarse de las ediciones <strong>Express</strong>, deberéis añadir la siguiente linea antes del cierre de la etiqueta <strong>&lt;/VisualStudio&gt;</strong>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Edition&gt;</span>WDExpress<span class="nt">&lt;/Edition&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Para que Visual Studio reconozca las nuevas plantillas de proyecto y aplique los cambios, ejecutaremos el siguiente comando desde la consola de texto de Windows. Pulsar <strong>Windows + R</strong> para mostrar la ventana de <strong>Ejecutar</strong> y llamar al <strong>cmd.exe</strong>. Si os diera error de acceso denegado o similar al ejecutar el comando, ejecutar <strong>cmd.exe</strong> con privilegios de administrador:</p>
+
+    <ul>
+      <li>
+        <p><strong>Visual Studio 2012 Express</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files\Microsoft Visual Studio 11.0\Common7\IDE\WDExpress.exe” /setup
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\WDExpress.exe” /setup
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Visual Studio 2013 Express</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\WDExpress.exe” /setup
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\WDExpress.exe” /setup
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Visual Studio 2012 Professional o superior</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe” /setup
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe” /setup
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Visual Studio 2013 Professional o superior</strong>:</p>
+
+        <ul>
+          <li>
+            <p><strong>Windows 32 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe” /setup
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p><strong>Windows 64 bits:</strong></p>
+
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe” /setup
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>El ultimo paso consiste en eliminar 2 archivos temporales, <strong>extensionSdks.en-US.cache</strong> y <strong>extensions.en-US.cache</strong>, en la siguiente ruta:</p>
+
+    <ul>
+      <li>
+        <p><strong>Visual Studio 2012 Express</strong>:</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\tu usuario\AppData\Local\Microsoft\WDExpress\11.0\Extensions\
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p><strong>Visual Studio 2013 Express:</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\tu usuario\AppData\Local\Microsoft\WDExpress\12.0\Extensions\
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p><strong>Visual Studio 2012 Professional o superior:</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\tu usuario\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p><strong>Visual Studio 2013 Professional o superior:</strong></p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\tu usuario\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>Una vez completados estos pasos, Visual Studio os debería mostrar las plantillas para nuevos proyectos de XNA 4.0 y estar todo listo para poder trabajar con ello.</p>
+
+<p>Este proceso descrito bien sirve para desarrollos de juegos para escritorio, en teoría, sin ningún problema. Aunque también se instalan las plantillas de <strong>XBox360</strong> y <strong>Windows Phone 7</strong>, dado que la instalación de XNA no es completa (falla uno de los paquetes referentes a los servicios de <strong>XBox Live</strong> por ejemplo) yo no me arriesgaría y usaría si o si Visual Studio 2010 y la instalación limpia de XNA 4.0 para proyectos de XBox360. Para desarrollos de <strong>Windows Phone 7.8</strong> con XNA (que también son soportados en <strong>Windows Phone 8</strong>) el <strong>Windows Phone SDK 8</strong> o <strong>Visual Studio 2012/2013 para Windows Phone</strong>, todavía incluye las plantillas de XNA para Windows Phone (e independientemente también instala XNA) por lo que es actualmente, la única vía posible para desarrollos Windows Phone 7.8 con XNA que existe (que yo recuerde, desde el <strong>Windows Phone SDK 7.1</strong> ya no funcionaba el proceso para hacer deploy en terminales Windows Phone).</p>
+
+<p>En resumen, este proceso descrito esta pensado para proyectos de juegos de escritorio que se quieran portar más adelante a MonoGame en Linux y Mac, permitiendo trabajar cómodamente desde Windows.</p>
+
+<p>Para finalizar este articulo, os dejo unas capturas de pantalla de <strong>Visual Studio 2013 Express</strong> en <strong>Windows 8.1</strong> donde se ven las plantillas de proyecto de XNA 4.0, el proyecto de juego para Windows montado y ejecutándose, y algunas opciones y configuraciones especificas de proyectos XNA.</p>
+
+<p>Referencias en donde encontré la información con la que he escrito este articulo:</p>
+
+<ul>
+  <li><a href="http://blogs.msdn.com/b/astebner/archive/2010/11/05/10086842.aspx">Aaron Stebner’s WebLog – Steps to install XNA Game Studio 4.0 without using the setup bootstrapper</a></li>
+  <li><a href="http://stackoverflow.com/a/10881007">Stack Overflow – How to install XNA game studio on Visual Studio 2012?</a></li>
+</ul>
+
+<p><strong>Editado:</strong> Corregida una pequeña errata en las rutas en el ultimo paso.</p>
+</div>
+
+        
+        <div class="pt-5">
+          <div class="row">
+    <div class="page-image">
+        <div class="gallery gallery-masonry">
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/00.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/00.webp" alt="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/00.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/01.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/01.webp" alt="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/01.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/02.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/02.webp" alt="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/02.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/03.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/03.webp" alt="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/03.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+                
+
+
+
+<div class="gallery-item">
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="gallery-image">
+  <a href="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/04.webp" target="_blank">
+    <img width="615" height="400" src="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/04.webp" alt="/assets/images/gen/posts/2013-10-28-how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk/04.webp" />
+  </a>
+</div>
+
+  
+
+  <div class="gallery-caption">
+    
+    <span></span>
+  </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    var grid = document.querySelector('.gallery');
+    var msnry;
+
+    imagesLoaded(grid, function () {
+        msnry = new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            percentPosition: true,
+            horizontalOrder: true
+        });
+    });
+</script>
+        </div>
+        
+
+        <div class="pt-5">
+          
+          <span>Categories</span>
+          <div class="categories">
+            <div class="d-flex flex-wrap">
+              
+
+
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/development">
+    Development
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/net">
+    .NET
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/xna">
+    XNA
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/pc">
+    PC
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/windows">
+    Windows
+  </a>
+  
+</div>
+
+
+
+
+
+
+<div class="category-link">
+  <a href="/category/archive">
+    Archive
+  </a>
+  
+</div>
+
+
+            </div>
+          </div>
+          
+
+          
+          
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/blog/how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk';
+    this.page.identifier = 'http://localhost:4000/blog/how-to-install-xna4-in-vs2013-without-install-vs2010-or-wphone-sdk';
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+          </div>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+  
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col-12 
+      
+      ">
+        <div class="footer-info">
+          <h2>Visual Studio EX3</h2>
+          <p>José Miguel Sánchez Fernández's personal web site and game projects portfolio.</p>
+        </div>
+
+        
+        
+
+<div class="social" id="social">
+  
+  <a href="https://www.linkedin.com/in/ex3tlsa/" target="blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  
+  <a href="https://github.com/VisualStudioEX3" target="blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  
+  <a href="https://www.flickr.com/photos/ex3_tlsa" target="blank" title="Flickr">
+    <i class="fab fa-flickr"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/ex3_tlsa" target="blank" title="Instagram">
+    <i class="fab fa-instagram-square"></i>
+  </a>
+  
+</div>
+
+        
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+
+          
+
+          
+
+          
+
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+  
+
+  
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+        
+        <div class="copyright">
+          <strong>© 2000 - <span id="current-year"></span> José Miguel Sánchez Fernández</strong>
+          
+          <p>The artwork and audio of some projects are property by their respective authors.</p>
+          
+
+          
+          
+            <p>
+              
+
+              
+
+              This site is made with 
+              <a href="https://jekyllrb.com/" target="_blank">
+                <strong>Jekyll</strong>
+              </a>
+               and based on 
+              <a href="https://www.zerostatic.io/theme/jekyll-curate/" target="_blank">
+                <strong>Jekyll Curate</strong>
+              </a>
+               theme.
+            </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script to get the current year for copyright text.
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
+  
+
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/hamburger.js"></script>
+  <script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+  
+
+</body>
+
+</html>
