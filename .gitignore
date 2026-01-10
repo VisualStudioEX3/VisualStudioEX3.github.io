@@ -1,3 +1,5 @@
+# This .gitignore file must be include in web site build result:
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
