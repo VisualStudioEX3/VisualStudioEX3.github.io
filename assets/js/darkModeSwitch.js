@@ -37,6 +37,9 @@ function initDarkMode() {
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.documentElement.setAttribute("data-mode", "dark");
     darkModeSwitches.forEach((item) => item.classList.add("dark"));
+    localStorage.setItem("darkMode", true);
+  } else {
+    localStorage.setItem("darkMode", false);
   }
 }
 
